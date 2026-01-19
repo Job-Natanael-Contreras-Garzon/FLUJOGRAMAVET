@@ -1,0 +1,7 @@
+<div class="progress-label-row">
+    <span class="label">PROGRESO</span>
+    <span class="value">{{ progress | number:'1.0-0' }}%</span>
+</div>
+<div class="progress-track">
+    <div class="progress-fill" [style.width.%]="progress"></div>
+</div>

@@ -1,0 +1,94 @@
+<div class="step-container" *ngIf="step">
+    <!-- Header -->
+    <div class="step-header">
+        <button class="back-btn" (click)="goBack()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <span class="step-title-header">Paso {{ step.id }}</span>
+    </div>
+
+    <app-progressbar [progress]="progress"></app-progressbar>
+
+    <div class="card content-card">
+        <!-- Icon logic based on step ID or generic -->
+        <div class="icon-circle" [ngClass]="{'red-bg': step.id % 2 !== 0}">
+            @if(step.id === 1) { ✉️ }
+            @else if(step.id === 2) { 🔐 }
+            @else if(step.id === 3) { 🔑 }
+            @else if(step.id === 4) { 💳 }
+            @else if(step.id === 5) { 💰 }
+            @else if(step.id === 6) { 📄 }
+            @else { ✅ }
+        </div>
+
+        <h2>{{ step.title }}</h2>
+        <p class="desc">{{ step.description }}</p>
+
+        <!-- Dynamic Details List -->
+        @if (step.details) {
+        <ul class="details-list">
+            @for (detail of step.details; track detail) {
+            <li>{{ detail }}</li>
+            }
+        </ul>
+        }
+
+        <!-- Exact Payment Details -->
+        @if (step.paymentDetails) {
+        <div class="payment-info">
+            <div class="amount">{{ step.paymentDetails.amount }}</div>
+            <div class="method">{{ step.paymentDetails.method }}</div>
+            <div class="requirement">⚠ {{ step.paymentDetails.requirement }}</div>
+        </div>
+
+        <!-- Bank Chips for step 4 specifically, or generic if method implies banks -->
+        @if (step.id === 4) {
+        <div class="bank-chips">
+            <span class="chip">BancoSol</span>
+            <span class="chip">BancoFie</span>
+            <span class="chip">Banco Ganadero</span>
+        </div>
+        }
+        }
+
+        <!-- Locations -->
+        @if (step.locations) {
+        <div class="locations-list">
+            @for (loc of step.locations; track loc.place) {
+            <div class="location-item">
+                <span class="place">{{ loc.place }}</span>
+                <span class="cost">{{ loc.cost }}</span>
+                <span class="notes">{{ loc.notes }}</span>
+            </div>
+            }
+        </div>
+        }
+
+        <!-- Requirements -->
+        @if (step.requirements) {
+        <div class="requirements-list">
+            @for (req of step.requirements; track req) {
+            <div class="req-item">
+                <span class="check">✔</span> {{ req }}
+            </div>
+            }
+        </div>
+        }
+
+        <!-- Main Action - Handles both completion and simple navigation text -->
+        <button class="btn-primary" (click)="advance()">
+            {{ step.actionText }}
+        </button>
+
+        @if (step.id === 1) {
+        <button class="btn-secondary">
+            ✕ No, no recibí nada
+        </button>
+        }
+    </div>
+
+    <!-- FAQ Section -->
+    <app-faq-section [questions]="step.faq || []"></app-faq-section>
+</div>

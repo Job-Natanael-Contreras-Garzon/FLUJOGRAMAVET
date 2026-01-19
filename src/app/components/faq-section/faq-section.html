@@ -1,0 +1,27 @@
+<div class="faq-container">
+    <h3 class="faq-title">Preguntas Frecuentes</h3>
+
+    @if (questions.length > 0) {
+    <div class="faq-list">
+        @for (q of questions; track q.user) {
+        <div class="faq-item">
+            <div class="avatar">{{ q.initials }}</div>
+            <div class="content">
+                <div class="header">
+                    <span class="username">{{ q.user }}</span>
+                </div>
+                <p class="question-text">{{ q.question }}</p>
+                <div class="meta">
+                    <span class="time">{{ q.time }}</span>
+                    <button class="reply-btn">Responder</button>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    } @else {
+    <p class="desc">No hay preguntas frecuentes para este paso.</p>
+    }
+
+    <button class="view-more">Ver más comentarios</button>
+</div>
