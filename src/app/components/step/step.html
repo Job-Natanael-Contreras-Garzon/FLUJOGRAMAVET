@@ -13,15 +13,7 @@
 
     <div class="card content-card">
         <!-- Icon logic based on step ID or generic -->
-        <div class="icon-circle" [ngClass]="{'red-bg': step.id % 2 !== 0}">
-            @if(step.id === 1) { ✉️ }
-            @else if(step.id === 2) { 🔐 }
-            @else if(step.id === 3) { 🔑 }
-            @else if(step.id === 4) { 💳 }
-            @else if(step.id === 5) { 💰 }
-            @else if(step.id === 6) { 📄 }
-            @else { ✅ }
-        </div>
+
 
         <h2>{{ step.title }}</h2>
         <p class="desc">{{ step.description }}</p>

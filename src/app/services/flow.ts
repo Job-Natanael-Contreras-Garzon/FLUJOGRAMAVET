@@ -1,37 +1,31 @@
 import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { FaqItem } from '../components/faq.component';
 
-export interface FaqItem {
-  initials: string;
-  user: string;
-  time: string;
-  question: string;
-}
+export type { FaqItem };
 
-export interface PaymentDetails {
-  amount: string;
-  method: string;
-  requirement: string;
-}
-
-export interface LocationDetail {
-  place: string;
-  cost: string;
-  notes: string;
-}
-
-export interface Step {
+export interface StepData {
   id: number;
   title: string;
   description: string;
   details?: string[];
+  paymentDetails?: {
+    amount: string;
+    method: string;
+    requirement?: string;
+  };
+  bankLogos?: string[];
+  requirements?: string[];
+  locations?: {
+    place: string;
+    cost: string;
+    notes: string;
+  }[];
   actionText: string;
   nextStep: number | null;
-  faq?: FaqItem[];
-  paymentDetails?: PaymentDetails;
-  locations?: LocationDetail[];
-  requirements?: string[];
+  faq: FaqItem[];
+  icon?: string;
 }
 
 @Injectable({
@@ -40,168 +34,119 @@ export interface Step {
 export class FlowService {
   private readonly STORAGE_KEY = 'vet_flow_progress';
 
-  private steps: Step[] = [
+  private steps: StepData[] = [
     {
       id: 1,
-      title: "Verificación de código de registro",
-      description: "Revisa el correo electrónico asociado a tu formulario del CUP. Busca un código de 9 dígitos.",
+      title: "Habilitación del registro",
+      description: "Revisa el correo que usaste en tu preinscripción. Recibirás un código de 9 dígitos (ej.: 222084006) para habilitar tu registro.",
       details: [
-        "Ejemplo de código: 222085444",
-        "Verifica bandeja de entrada y spam"
+        "📧 Revisa el correo de tu preinscripción",
+        "🔢 Recibirás un código de 9 dígitos (ej.: 222084006)"
       ],
-      actionText: "✓ Sí, recibí mi código",
+      actionText: "TUKI-LISTO",
       nextStep: 2,
       faq: [
-        {
-          initials: "AM",
-          user: "Ana M.",
-          time: "2 horas",
-          question: "¿Qué hago si no recibí el código de registro?"
-        },
-        {
-          initials: "CR",
-          user: "Carlos R.",
-          time: "1 día",
-          question: "¿El código expira después de cierto tiempo?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué es ese código?", answer: "Es tu número único de estudiante, te identifica dentro de la UAGRM 🎓" },
+        { initials: "📩", user: "Soporte", time: "Hace un momento", question: "¿No recibiste el correo?", answer: "Revisa tu SPAM o verifica que el correo registrado sea correcto." },
+        { initials: "📍", user: "Info", time: "Hace un momento", question: "¿Dónde preguntar?", answer: "En Dirección de Carrera de la Facultad de Ciencias Veterinarias o en el CPD facultativo." }
       ]
     },
     {
       id: 2,
-      title: "Acceso al sistema",
-      description: "Ingresa al portal universitario con tus credenciales",
+      title: "Activa tu perfil universitario",
+      description: "Ingresa al link 🔗, selecciona la opción Estudiante y completa los datos",
       details: [
         "Enlace: uagrm_login",
-        "Registro: Tu código de 9 dígitos (ej: 222085444)",
-        "Contraseña: Número de tu carnet de identidad"
+        "🆔 Registro: 218007663",
+        "🔑 Contraseña: tu número de carnet de identidad"
       ],
-      actionText: "Ingresar al sistema",
+      actionText: "TUKI-LISTO",
       nextStep: 3,
       faq: [
-        {
-          initials: "LT",
-          user: "Lucía T.",
-          time: "3 horas",
-          question: "¿Qué pasa si olvidé mi número de carnet?"
-        },
-        {
-          initials: "JM",
-          user: "Juan M.",
-          time: "5 horas",
-          question: "¿El enlace funciona en móviles?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Tu carnet está vencido?", answer: "No afecta en nada tu proceso de ingreso ✅" },
+        { initials: "🌐", user: "Soporte", time: "Hace un momento", question: "¿La página no carga?", answer: "Verifica tu conexión a Internet o intenta ingresar desde otro dispositivo 📱💻" }
       ]
     },
     {
       id: 3,
-      title: "Cambio de contraseña",
-      description: "Actualiza tu contraseña en el perfil universitario",
+      title: "🔒 Cambia tu contraseña (obligatorio)",
+      description: "Es fundamental para la seguridad de tu perfil.",
       details: [
-        "Inicia sesión con tus credenciales actuales",
-        "Ve al menú de usuario",
-        "Selecciona 'Cambiar contraseña'",
-        "Guarda los cambios con una nueva contraseña segura"
+        "1️⃣ Ingresa al Menú",
+        "2️⃣ Selecciona Cambiar contraseña",
+        "3️⃣ Crea una nueva contraseña y guarda los cambios"
       ],
-      actionText: "Contraseña actualizada",
+      actionText: "TUKI-LISTO",
       nextStep: 4,
       faq: [
-        {
-          initials: "PL",
-          user: "Pedro L.",
-          time: "1 día",
-          question: "¿Qué requisitos debe cumplir la nueva contraseña?"
-        },
-        {
-          initials: "MR",
-          user: "María R.",
-          time: "2 días",
-          question: "¿Puedo revertir el cambio de contraseña?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué pasa si no cambio mi contraseña?", answer: "No podrás agarrar materias en el semestre regular ❌" },
+        { initials: "🔑", user: "Consejo Tuki", time: "Hace un momento", question: "¿Qué contraseña puedo usar?", answer: "Debe incluir: ✔ letras mayúsculas y minúsculas, ✔ números, ✔ signos (recomendado)" },
+        { initials: "🔄", user: "Soporte", time: "Hace un momento", question: "¿Olvidaste tu contraseña?", answer: "Ingresa a tu perfil universitario, haz clic en “Olvidé mi contraseña” y sigue el proceso de recuperación." }
       ]
     },
     {
       id: 4,
-      title: "Pago de matrícula",
-      description: "Realiza el pago obligatorio de matrícula",
+      title: "💳 Realiza tus Tuki-pagos",
+      description: "🏦 Cancela tu matrícula en las entidades financieras habilitadas",
+      bankLogos: [
+        "LogoEcofuturo.svg",
+        "LogoProdem.png",
+        "logo-fie.svg",
+        "logoCopLaMerced.png",
+        "logoCrecer.png",
+        "logoFarmacorp.webp",
+        "logoJNazareno.webp",
+        "logoSMporrez.png"
+      ],
+      details: [
+        "🆔 Presenta tu carnet de identidad y número de registro",
+        "⚠️ Pago único y en efectivo"
+      ],
       paymentDetails: {
         amount: "300 Bs",
         method: "Efectivo en entidades financieras autorizadas",
         requirement: "Presentar carnet de identidad"
       },
-      actionText: "✓ Pago de matrícula realizado",
+      actionText: "TUKI-LISTO",
       nextStep: 5,
       faq: [
-        {
-          initials: "RS",
-          user: "Roberto S.",
-          time: "4 horas",
-          question: "¿Qué entidades financieras están autorizadas?"
-        },
-        {
-          initials: "VG",
-          user: "Valeria G.",
-          time: "1 día",
-          question: "¿Puedo pagar con tarjeta de débito?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Por qué es importante cancelar este pago?", answer: "Incluye tus análisis médicos y revisiones que realizarás durante la carrera 🩺" },
+        { initials: "🚫", user: "Advertencia", time: "Hace un momento", question: "¿Qué pasa si no cancelo?", answer: "No podrás continuar con la inscripción de materias." },
+        { initials: "🧾", user: "Info", time: "Hace un momento", question: "¿Por qué necesito la boleta de pago?", answer: "El CPD la solicita al momento de inscribir tus materias." }
       ]
     },
     {
       id: 5,
-      title: "Aporte facultativo",
-      description: "Realiza el pago del aporte facultativo",
+      title: "💳 Realiza tus Tuki-pagos",
+      description: "🏫 Aporte facultativo: Dirígete a la Facultad de Ciencias Veterinarias, sector Cajas.",
       paymentDetails: {
-        amount: "1500 Bs",
-        method: "Caja de la facultad de Medicina Veterinaria",
+        amount: "1.500 Bs",
+        method: "⚠️ Pago en efectivo",
         requirement: "Presentar recibo de pago de matrícula"
       },
-      actionText: "✓ Aporte facultativo realizado",
+      actionText: "TUKI-LISTO",
       nextStep: 6,
       faq: [
-        {
-          initials: "DC",
-          user: "Diego C.",
-          time: "6 horas",
-          question: "¿Es obligatorio este pago para inscribirme?"
-        },
-        {
-          initials: "KL",
-          user: "Karen L.",
-          time: "12 horas",
-          question: "¿Dónde queda exactamente la caja de la facultad?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Por qué el monto es elevado?", answer: "Porque es un pago único al inicio de la carrera. Durante los 5 años no volverás a cancelarlo ✅" },
+        { initials: "📲", user: "Soporte", time: "Hace un momento", question: "¿Puedo pagar por QR?", answer: "No. El pago debe realizarse solo en efectivo, ya que el personal verifica que el monto y los datos sean correctos." },
+        { initials: "🏥", user: "Info", time: "Hace un momento", question: "¿En qué se utiliza este dinero?", answer: "Contribuye a la compra de insumos para prácticas y materiales de laboratorio de la facultad 🧪" }
       ]
     },
     {
       id: 6,
-      title: "Obtención de hojita de inscripción",
-      description: "Consigue tu documento físico para continuar con la inscripción",
+      title: "📝 Tuki-inscripción",
+      description: "Obtén tu hojita de inscripción en:",
       locations: [
-        {
-          place: "Fotocopia de Veterinaria",
-          cost: "2 × 50 ctvs",
-          notes: "Horario: 8:00 - 18:00"
-        },
-        {
-          place: "Centro Interno de Veterinaria",
-          cost: "Gratis",
-          notes: "Presentar comprobante de pagos"
-        }
+        { place: "Fotocopiadora", cost: "2x50 ctv", notes: "Compra tu hojita aquí" },
+        { place: "Centro Interno", cost: "Gratis", notes: "Solicítala sin costo" },
+        { place: "🎁 Tuki-amigos", cost: "Gratis", notes: "Estarán regalando hojas el día de la inscripción" }
       ],
-      actionText: "✓ Tengo mi hojita de inscripción",
+      actionText: "TUKI-LISTO",
       nextStep: 7,
       faq: [
-        {
-          initials: "FM",
-          user: "Fernanda M.",
-          time: "3 horas",
-          question: "¿Puedo imprimir la hojita desde casa?"
-        },
-        {
-          initials: "ER",
-          user: "Eduardo R.",
-          time: "1 día",
-          question: "¿Qué pasa si pierdo la hojita después de conseguirla?"
-        }
+        { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Para qué sirve la hojita de inscripción?", answer: "Es la que entregarás al CPD para inscribir tus materias 📝" },
+        { initials: "🚫", user: "Advertencia", time: "Hace un momento", question: "¿Qué pasa si no tengo la hojita?", answer: "Compra una o pide ayuda a tu Tuki-amigo para no quedarte sin inscribir ✅" },
+        { initials: "✏️", user: "Consejo Tuki", time: "Hace un momento", question: "¿Debo colocar algo extra?", answer: "No, solo completa lo solicitado y llena los espacios requeridos" }
       ]
     },
     {
@@ -217,108 +162,19 @@ export class FlowService {
       actionText: "Finalizar trámite",
       nextStep: null,
       faq: [
-        {
-          initials: "AP",
-          user: "Antonio P.",
-          time: "5 horas",
-          question: "¿Hay horario específico para presentar documentos?"
-        },
-        {
-          initials: "SL",
-          user: "Sofía L.",
-          time: "2 días",
-          question: "¿Puedo delegar la entrega a un familiar?"
-        }
+        { initials: "AP", user: "Antonio P.", time: "5 horas", question: "¿Hay horario específico para presentar documentos?" },
+        { initials: "SL", user: "Sofía L.", time: "2 días", question: "¿Puedo delegar la entrega a un familiar?" }
       ]
     }
   ];
 
-  private currentStepIdSubject = new BehaviorSubject<number>(1);
-  public currentStepId$ = this.currentStepIdSubject.asObservable();
+  constructor() { }
 
-  private completedStepsSubject = new BehaviorSubject<Set<number>>(new Set());
-  public completedSteps$ = this.completedStepsSubject.asObservable();
-
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    this.loadProgress();
-  }
-
-  getSteps(): Step[] {
+  getSteps(): StepData[] {
     return this.steps;
   }
 
-  getCurrentStep() {
-    return this.steps.find(s => s.id === this.currentStepIdSubject.value);
-  }
-
-  getStep(id: number) {
+  getStep(id: number): StepData | undefined {
     return this.steps.find(s => s.id === id);
-  }
-
-  markStepCompleted(stepId: number) {
-    const currentCompleted = this.completedStepsSubject.value;
-    currentCompleted.add(stepId);
-    this.completedStepsSubject.next(currentCompleted);
-    this.saveProgress();
-  }
-
-  setCurrentStep(stepId: number) {
-    if (this.steps.find(s => s.id === stepId)) {
-      this.currentStepIdSubject.next(stepId);
-      if (isPlatformBrowser(this.platformId)) {
-        window.scrollTo(0, 0);
-      }
-    }
-  }
-
-  completeCurrentStepAndAdvance() {
-    const currentId = this.currentStepIdSubject.value;
-    this.markStepCompleted(currentId);
-
-    const currentStep = this.getStep(currentId);
-    if (currentStep && currentStep.nextStep !== null) {
-      this.setCurrentStep(currentStep.nextStep);
-    }
-  }
-
-  isStepCompleted(stepId: number): boolean {
-    return this.completedStepsSubject.value.has(stepId);
-  }
-
-  private saveProgress() {
-    if (isPlatformBrowser(this.platformId)) {
-      const data = {
-        completed: Array.from(this.completedStepsSubject.value),
-        current: this.currentStepIdSubject.value
-      };
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
-    }
-  }
-
-  private loadProgress() {
-    if (isPlatformBrowser(this.platformId)) {
-      const saved = localStorage.getItem(this.STORAGE_KEY);
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          if (parsed.completed && Array.isArray(parsed.completed)) {
-            this.completedStepsSubject.next(new Set(parsed.completed));
-          }
-          if (parsed.current) {
-            if (this.steps.find(s => s.id === parsed.current)) {
-              this.currentStepIdSubject.next(parsed.current);
-            }
-          }
-        } catch (e) {
-          console.error('Failed to load progress', e);
-        }
-      }
-    }
-  }
-
-  getProgressPercentage(): number {
-    const total = this.steps.length;
-    const current = this.currentStepIdSubject.value;
-    return Math.min(((current) / total) * 100, 100);
   }
 }

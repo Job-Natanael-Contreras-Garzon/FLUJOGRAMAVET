@@ -2,28 +2,7 @@ import { Component, input, output, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaqComponent, FaqItem } from './faq.component';
 
-export interface StepData {
-  id: number;
-  title: string;
-  description: string;
-  details?: string[];
-  paymentDetails?: {
-    amount: string;
-    method: string;
-    requirement?: string;
-  };
-  bankLogos?: string[];
-  requirements?: string[];
-  locations?: {
-    place: string;
-    cost: string;
-    notes: string;
-  }[];
-  actionText: string;
-  nextStep: number | null;
-  faq: FaqItem[];
-  icon?: string;
-}
+import { StepData } from '../services/flow';
 
 @Component({
   selector: 'app-step-viewer',
@@ -61,14 +40,6 @@ export interface StepData {
         <!-- Main Card -->
         <div class="bg-white dark:bg-dark-card rounded-[2rem] shadow-sm p-6 mb-8 border border-slate-100 dark:border-white/5 transition-colors duration-300 relative overflow-hidden">
           
-          <!-- Decorative Background for icon area -->
-          <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-red-50 to-transparent dark:from-white/5 dark:to-transparent opacity-50 pointer-events-none"></div>
-
-          <!-- Icon -->
-          <div class="w-20 h-20 bg-white dark:bg-dark-card rounded-full flex items-center justify-center mx-auto mb-6 relative z-10 shadow-sm border border-slate-100 dark:border-white/10">
-             <span class="material-symbols-outlined text-4xl text-primary">{{ getIcon() }}</span>
-          </div>
-
           <!-- Title & Description -->
           <h3 class="text-center text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">
             {{ step().title }}
