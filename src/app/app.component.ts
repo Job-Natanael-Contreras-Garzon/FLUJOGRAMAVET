@@ -78,66 +78,84 @@ export class AppComponent {
         },
         {
             id: 3,
-            title: "Cambio de contraseña",
-            description: "Actualiza tu contraseña en el perfil universitario",
+            title: "🔒 Cambia tu contraseña (obligatorio)",
+            description: "Es fundamental para la seguridad de tu perfil.",
             details: [
-                "Inicia sesión con tus credenciales actuales",
-                "Ve al menú de usuario",
-                "Selecciona 'Cambiar contraseña'",
-                "Guarda los cambios con una nueva contraseña segura"
+                "1️⃣ Ingresa al Menú",
+                "2️⃣ Selecciona Cambiar contraseña",
+                "3️⃣ Crea una nueva contraseña y guarda los cambios"
             ],
-            actionText: "Contraseña actualizada",
+            actionText: "TUKI-LISTO",
             nextStep: 4,
             faq: [
-                { initials: "PL", user: "Pedro L.", time: "1 día", question: "¿Qué requisitos debe cumplir la nueva contraseña?" },
-                { initials: "MR", user: "María R.", time: "2 días", question: "¿Puedo revertir el cambio de contraseña?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué pasa si no cambio mi contraseña?", answer: "No podrás agarrar materias en el semestre regular ❌" },
+                { initials: "🔑", user: "Consejo Tuki", time: "Hace un momento", question: "¿Qué contraseña puedo usar?", answer: "Debe incluir: ✔ letras mayúsculas y minúsculas, ✔ números, ✔ signos (recomendado)" },
+                { initials: "🔄", user: "Soporte", time: "Hace un momento", question: "¿Olvidaste tu contraseña?", answer: "Ingresa a tu perfil universitario, haz clic en “Olvidé mi contraseña” y sigue el proceso de recuperación." }
             ]
         },
         {
             id: 4,
-            title: "Pago de matrícula",
-            description: "Realiza el pago obligatorio de matrícula",
+            title: "💳 Realiza tus Tuki-pagos",
+            description: "🏦 Cancela tu matrícula en las entidades financieras habilitadas",
+            bankLogos: [
+                "LogoEcofuturo.svg",
+                "LogoProdem.png",
+                "logo-fie.svg",
+                "logoCopLaMerced.png",
+                "logoCrecer.png",
+                "logoFarmacorp.webp",
+                "logoJNazareno.webp",
+                "logoSMporrez.png"
+            ],
+            details: [
+                "🆔 Presenta tu carnet de identidad y número de registro",
+                "⚠️ Pago único y en efectivo"
+            ],
             paymentDetails: {
                 amount: "300 Bs",
                 method: "Efectivo en entidades financieras autorizadas",
                 requirement: "Presentar carnet de identidad"
             },
-            actionText: "✓ Pago de matrícula realizado",
+            actionText: "TUKI-LISTO",
             nextStep: 5,
             faq: [
-                { initials: "RS", user: "Roberto S.", time: "4 horas", question: "¿Qué entidades financieras están autorizadas?" },
-                { initials: "VG", user: "Valeria G.", time: "1 día", question: "¿Puedo pagar con tarjeta de débito?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Por qué es importante cancelar este pago?", answer: "Incluye tus análisis médicos y revisiones que realizarás durante la carrera 🩺" },
+                { initials: "🚫", user: "Advertencia", time: "Hace un momento", question: "¿Qué pasa si no cancelo?", answer: "No podrás continuar con la inscripción de materias." },
+                { initials: "🧾", user: "Info", time: "Hace un momento", question: "¿Por qué necesito la boleta de pago?", answer: "El CPD la solicita al momento de inscribir tus materias." }
             ]
         },
         {
             id: 5,
-            title: "Aporte facultativo",
-            description: "Realiza el pago del aporte facultativo",
+            title: "🏫 Aporte facultativo",
+            description: "Dirígete a la Facultad de Ciencias Veterinarias, sector Cajas.",
             paymentDetails: {
-                amount: "1500 Bs",
-                method: "Caja de la facultad de Medicina Veterinaria",
+                amount: "1.500 Bs",
+                method: "⚠️ Pago en efectivo",
                 requirement: "Presentar recibo de pago de matrícula"
             },
-            actionText: "✓ Aporte facultativo realizado",
+            actionText: "TUKI-LISTO",
             nextStep: 6,
             faq: [
-                { initials: "DC", user: "Diego C.", time: "6 horas", question: "¿Es obligatorio este pago para inscribirme?" },
-                { initials: "KL", user: "Karen L.", time: "12 horas", question: "¿Dónde queda exactamente la caja de la facultad?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Por qué el monto es elevado?", answer: "Porque es un pago único al inicio de la carrera. Durante los 5 años no volverás a cancelarlo ✅" },
+                { initials: "📲", user: "Soporte", time: "Hace un momento", question: "¿Puedo pagar por QR?", answer: "No. El pago debe realizarse solo en efectivo, ya que el personal verifica que el monto y los datos sean correctos." },
+                { initials: "🏥", user: "Info", time: "Hace un momento", question: "¿En qué se utiliza este dinero?", answer: "Contribuye a la compra de insumos para prácticas y materiales de laboratorio de la facultad 🧪" }
             ]
         },
         {
             id: 6,
-            title: "Obtención de hojita de inscripción",
-            description: "Consigue tu documento físico para continuar con la inscripción",
+            title: "📝 Tuki-inscripción",
+            description: "Obtén tu hojita de inscripción en:",
             locations: [
-                { place: "Fotocopia de Veterinaria", cost: "2 × 50 ctvs", notes: "Horario: 8:00 - 18:00" },
-                { place: "Centro Interno de Veterinaria", cost: "Gratis", notes: "Presentar comprobante de pagos" }
+                { place: "Fotocopiadora", cost: "2x50 ctv", notes: "Compra tu hojita aquí" },
+                { place: "Centro Interno", cost: "Gratis", notes: "Solicítala sin costo" },
+                { place: "🎁 Tuki-amigos", cost: "Gratis", notes: "Estarán regalando hojas el día de la inscripción" }
             ],
-            actionText: "✓ Tengo mi hojita de inscripción",
+            actionText: "TUKI-LISTO",
             nextStep: 7,
             faq: [
-                { initials: "FM", user: "Fernanda M.", time: "3 horas", question: "¿Puedo imprimir la hojita desde casa?" },
-                { initials: "ER", user: "Eduardo R.", time: "1 día", question: "¿Qué pasa si pierdo la hojita después de conseguirla?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Para qué sirve la hojita de inscripción?", answer: "Es la que entregarás al CPD para inscribir tus materias 📝" },
+                { initials: "🚫", user: "Advertencia", time: "Hace un momento", question: "¿Qué pasa si no tengo la hojita?", answer: "Compra una o pide ayuda a tu Tuki-amigo para no quedarte sin inscribir ✅" },
+                { initials: "✏️", user: "Consejo Tuki", time: "Hace un momento", question: "¿Debo colocar algo extra?", answer: "No, solo completa lo solicitado y llena los espacios requeridos" }
             ]
         },
         {

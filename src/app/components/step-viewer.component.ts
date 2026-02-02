@@ -12,6 +12,7 @@ export interface StepData {
     method: string;
     requirement?: string;
   };
+  bankLogos?: string[];
   requirements?: string[];
   locations?: {
     place: string;
@@ -87,6 +88,21 @@ export interface StepData {
                   </li>
                 }
               </ul>
+            </div>
+          }
+
+          <!-- Dynamic Content: Bank Logos -->
+          @if (step().bankLogos) {
+            <div class="mb-6 grid grid-cols-3 gap-4">
+              @for (logo of step().bankLogos; track logo) {
+                <div 
+                  class="flex items-center justify-center h-20 w-full"
+                  [class.bg-[#00B4D8]/20]="logo.includes('Farmacorp')"
+                  [class.rounded-[30%]]="logo.includes('Farmacorp')"
+                  [class.p-2]="logo.includes('Farmacorp')">
+                   <img [src]="'logosbancos/' + logo" class="max-w-full max-h-full object-contain" alt="Bank Logo">
+                </div>
+              }
             </div>
           }
 
