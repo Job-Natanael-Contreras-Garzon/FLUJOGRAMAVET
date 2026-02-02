@@ -55,9 +55,9 @@ export class AppComponent {
             actionText: "TUKI-LISTO",
             nextStep: 2,
             faq: [
-                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué es ese código? Es tu número único de estudiante, te identifica dentro de la UAGRM 🎓" },
-                { initials: "📩", user: "Soporte", time: "Hace un momento", question: "¿No recibiste el correo? Revisa tu SPAM o verifica que el correo registrado sea correcto." },
-                { initials: "📍", user: "Info", time: "Hace un momento", question: "¿Dónde preguntar? En Dirección de Carrera de la Facultad de Ciencias Veterinarias o en el CPD facultativo." }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué es ese código?", answer: "Es tu número único de estudiante, te identifica dentro de la UAGRM 🎓" },
+                { initials: "📩", user: "Soporte", time: "Hace un momento", question: "¿No recibiste el correo?", answer: "Revisa tu SPAM o verifica que el correo registrado sea correcto." },
+                { initials: "📍", user: "Info", time: "Hace un momento", question: "¿Dónde preguntar?", answer: "En Dirección de Carrera de la Facultad de Ciencias Veterinarias o en el CPD facultativo." }
             ]
         },
         {
@@ -72,8 +72,8 @@ export class AppComponent {
             actionText: "TUKI-LISTO",
             nextStep: 3,
             faq: [
-                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Tu carnet está vencido? No afecta en nada tu proceso de ingreso ✅" },
-                { initials: "🌐", user: "Soporte", time: "Hace un momento", question: "¿La página no carga? Verifica tu conexión a Internet o intenta ingresar desde otro dispositivo 📱💻" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Tu carnet está vencido?", answer: "No afecta en nada tu proceso de ingreso ✅" },
+                { initials: "🌐", user: "Soporte", time: "Hace un momento", question: "¿La página no carga?", answer: "Verifica tu conexión a Internet o intenta ingresar desde otro dispositivo 📱💻" }
             ]
         },
         {
