@@ -46,33 +46,34 @@ export class AppComponent {
     private stepsData: StepData[] = [
         {
             id: 1,
-            title: "Verificación de código de registro",
-            description: "Revisa el correo electrónico asociado a tu formulario del CUP. Busca un código de 9 dígitos.",
+            title: "Habilitación del registro",
+            description: "Revisa el correo que usaste en tu preinscripción. Recibirás un código de 9 dígitos (ej.: 222084006) para habilitar tu registro.",
             details: [
-                "Ejemplo de código: 222085444",
-                "Verifica bandeja de entrada y spam"
+                "📧 Revisa el correo de tu preinscripción",
+                "🔢 Recibirás un código de 9 dígitos (ej.: 222084006)"
             ],
-            actionText: "✓ Sí, recibí mi código",
+            actionText: "TUKI-LISTO",
             nextStep: 2,
             faq: [
-                { initials: "AM", user: "Ana M.", time: "2 horas", question: "¿Qué hago si no recibí el código de registro?" },
-                { initials: "CR", user: "Carlos R.", time: "1 día", question: "¿El código expira después de cierto tiempo?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Qué es ese código? Es tu número único de estudiante, te identifica dentro de la UAGRM 🎓" },
+                { initials: "📩", user: "Soporte", time: "Hace un momento", question: "¿No recibiste el correo? Revisa tu SPAM o verifica que el correo registrado sea correcto." },
+                { initials: "📍", user: "Info", time: "Hace un momento", question: "¿Dónde preguntar? En Dirección de Carrera de la Facultad de Ciencias Veterinarias o en el CPD facultativo." }
             ]
         },
         {
             id: 2,
-            title: "Acceso al sistema",
-            description: "Ingresa al portal universitario con tus credenciales",
+            title: "Activa tu perfil universitario",
+            description: "Ingresa al link 🔗, selecciona la opción Estudiante y completa los datos",
             details: [
                 "Enlace: uagrm_login",
-                "Registro: Tu código de 9 dígitos (ej: 222085444)",
-                "Contraseña: Número de tu carnet de identidad"
+                "🆔 Registro: 218007663",
+                "🔑 Contraseña: tu número de carnet de identidad"
             ],
-            actionText: "Ingresar al sistema",
+            actionText: "TUKI-LISTO",
             nextStep: 3,
             faq: [
-                { initials: "LT", user: "Lucía T.", time: "3 horas", question: "¿Qué pasa si olvidé mi número de carnet?" },
-                { initials: "JM", user: "Juan M.", time: "5 horas", question: "¿El enlace funciona en móviles?" }
+                { initials: "❓", user: "Duda Frecuente", time: "Ahora", question: "¿Tu carnet está vencido? No afecta en nada tu proceso de ingreso ✅" },
+                { initials: "🌐", user: "Soporte", time: "Hace un momento", question: "¿La página no carga? Verifica tu conexión a Internet o intenta ingresar desde otro dispositivo 📱💻" }
             ]
         },
         {
