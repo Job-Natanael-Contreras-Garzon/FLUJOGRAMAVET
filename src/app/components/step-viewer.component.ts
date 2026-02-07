@@ -17,7 +17,7 @@ import { StepData } from '../services/flow';
           <span class="material-symbols-outlined">arrow_back_ios_new</span>
         </button>
         <h2 class="flex-1 text-center font-bold text-slate-800 dark:text-white text-lg pr-8 truncate">
-          Paso {{ step().id }}: {{ step().title }}
+          Paso {{ step().id }}: {{ step().subtitle }}
         </h2>
       </header>
 
@@ -48,35 +48,7 @@ import { StepData } from '../services/flow';
             {{ step().description }}
           </p>
 
-          <!-- Dynamic Content: Simple Details List -->
-          @if (step().details) {
-            <div class="bg-slate-50 dark:bg-white/5 rounded-xl p-4 mb-6 border border-slate-100 dark:border-white/5">
-              <ul class="space-y-3">
-                @for (detail of step().details; track detail) {
-                  <li class="flex gap-3 text-sm text-slate-700 dark:text-gray-300">
-                    <span class="material-symbols-outlined text-primary text-lg flex-shrink-0">check_small</span>
-                    <span [innerHTML]="highlightText(detail)"></span>
-                  </li>
-                }
-              </ul>
-            </div>
-          }
-
-          <!-- Dynamic Content: Bank Logos -->
-          @if (step().bankLogos) {
-            <div class="mb-6 grid grid-cols-3 gap-4">
-              @for (logo of step().bankLogos; track logo) {
-                <div 
-                  class="flex items-center justify-center h-20 w-full"
-                  [class.bg-[#00B4D8]/20]="logo.includes('Farmacorp')"
-                  [class.rounded-[30%]]="logo.includes('Farmacorp')"
-                  [class.p-2]="logo.includes('Farmacorp')">
-                   <img [src]="'logosbancos/' + logo" class="max-w-full max-h-full object-contain" alt="Bank Logo">
-                </div>
-              }
-            </div>
-          }
-
+          
           <!-- Dynamic Content: Payment Details -->
           @if (step().paymentDetails; as pay) {
             <div class="bg-slate-50 dark:bg-white/5 rounded-xl p-5 mb-6 border border-slate-100 dark:border-white/5">
@@ -104,7 +76,44 @@ import { StepData } from '../services/flow';
               </div>
             </div>
           }
-
+          <!-- Dynamic Content: Bank Logos -->
+          @if (step().bankLogos) {
+            <div class="mb-6 grid grid-cols-3 gap-4">
+              @for (logo of step().bankLogos; track logo) {
+                <div 
+                  class="flex items-center justify-center h-20 w-full"
+                  [class.bg-[#00B4D8]/20]="logo.includes('Farmacorp')"
+                  [class.rounded-[30%]]="logo.includes('Farmacorp')"
+                  [class.p-2]="logo.includes('Farmacorp')">
+                   <img [src]="'logosbancos/' + logo" class="max-w-full max-h-full object-contain" alt="Bank Logo">
+                </div>
+              }
+            </div>
+          }
+          @if (step().imagenes) {
+            <div class="mb-6 grid grid-cols-3 gap-4">
+              @for (imagen of step().imagenes; track imagen) {
+                <div 
+                  class="flex items-center justify-center h-20 w-full">
+                   <img [src]="'imagenes/' + imagen" class="max-w-full max-h-full object-contain" alt="modulo 228">
+                </div>
+              }
+            </div>
+          }
+          
+          <!-- Dynamic Content: Simple Details List -->
+          @if (step().details) {
+            <div class="bg-slate-50 dark:bg-white/5 rounded-xl p-4 mb-6 border border-slate-100 dark:border-white/5">
+              <ul class="space-y-3">
+                @for (detail of step().details; track detail) {
+                  <li class="flex gap-3 text-sm text-slate-700 dark:text-gray-300">
+                    <span class="material-symbols-outlined text-primary text-lg flex-shrink-0">check_small</span>
+                    <span [innerHTML]="highlightText(detail)"></span>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
           <!-- Dynamic Content: Locations -->
           @if (step().locations) {
             <div class="space-y-4 mb-6">
@@ -199,7 +208,7 @@ export class StepViewerComponent {
     // Simple regex to bold numbers or codes in brackets [code] or just digits
     // Replacing [text] with yellow highlight span
     return text.replace(/(\d{9})/g, '<span class="text-primary dark:text-secondary font-mono font-bold">$1</span>')
-      .replace(/uagrm_login/g, '<span class="text-primary dark:text-secondary font-bold underline cursor-pointer">uagrm_login</span>');
+      .replace(/Perfil UAGRM/g, '<a href="https://perfil.uagrm.edu.bo/estudiantes/default.php" target="_blank" class="text-primary dark:text-secondary font-bold underline cursor-pointer hover:text-blue-600 transition-colors">Perfil UAGRM</a>');
   }
 
   handleAction() {

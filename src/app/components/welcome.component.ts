@@ -37,7 +37,7 @@ import { Component, output } from '@angular/core';
         <div class="w-10 h-1 bg-red-100 dark:bg-red-900 mx-auto rounded-full mb-6"></div>
 
         <p class="text-center text-slate-500 dark:text-gray-400 text-sm font-medium mb-8 leading-relaxed">
-          Tu TukiLista está aquí para guiarte paso a paso en tu proceso de ingreso.
+          Esta TukiLista está aquí para guiarte paso a paso en tu proceso de ingreso.
           <br class="hidden sm:block" />
           Sigue cada punto con atención y cumple todos los requisitos.
         </p>
@@ -52,7 +52,7 @@ import { Component, output } from '@angular/core';
       </div>
       
       <div class="relative z-10 mt-8 text-white/40 text-xs font-semibold tracking-widest uppercase">
-        Facultad de Veterinaria
+        Facultad de Ciencias Veterinarias
       </div>
     </div>
   `,

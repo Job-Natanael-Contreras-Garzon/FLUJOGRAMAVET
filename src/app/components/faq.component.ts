@@ -7,6 +7,9 @@ export interface FaqItem {
   time: string;
   question: string;
   answer?: string;
+  useranswer?: string;
+  userimage?: string;
+  useranswerimage?: string;
 }
 
 @Component({
@@ -46,8 +49,8 @@ export interface FaqItem {
                     </div>
                     <div class="flex-1">
                        <div class="bg-red-50 dark:bg-red-900/10 p-3 rounded-2xl rounded-tl-none border border-red-100 dark:border-red-900/20 shadow-sm inline-block max-w-full">
-                          <span class="text-xs font-bold text-primary block mb-0.5">Tuki Asistente</span>
-                          <p class="text-xs text-slate-700 dark:text-gray-300 leading-snug">
+                          <span class="text-xs font-bold text-primary block mb-0.5">{{item.useranswer}}</span>
+                          <p class="text-xs text-slate-700 dark:text-gray-300 leading-snug whitespace-pre-line">
                              {{ item.answer }}
                           </p>
                        </div>
