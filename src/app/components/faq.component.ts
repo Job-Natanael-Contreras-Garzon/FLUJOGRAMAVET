@@ -26,7 +26,7 @@ export interface FaqItem {
           <!-- Main Question -->
           <div class="flex gap-3 animate-fade-in group">
             <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 text-[10px] font-bold shadow-sm ring-2 ring-white dark:ring-transparent">
-              {{ item.initials }}
+              <img [src]="'personas/'+ item.userimage" alt="{{ item.user }}" class="rounded-full">
             </div>
             <div class="flex-1">
               <div class="bg-white dark:bg-dark-card p-3 rounded-2xl rounded-tl-none border border-slate-100 dark:border-white/5 shadow-sm inline-block max-w-[90%] transition-colors duration-300">
@@ -35,17 +35,12 @@ export interface FaqItem {
                   {{ item.question }}
                 </p>
               </div>
-              <div class="flex items-center gap-4 mt-1.5 ml-2">
-                <span class="text-[10px] text-slate-400 dark:text-gray-500 font-medium">Hace {{ item.time }}</span>
-                <button class="text-[10px] font-bold text-slate-500 dark:text-gray-400 hover:text-primary transition-colors">Responder</button>
-                <button class="text-[10px] font-bold text-slate-500 dark:text-gray-400 hover:text-primary transition-colors">Me gusta</button>
-              </div>
 
               <!-- Nested Answer (Thread Style) -->
               @if (item.answer) {
                  <div class="mt-4 flex gap-3 relative before:absolute before:left-[-20px] before:top-[-20px] before:h-[40px] before:w-[12px] before:border-l-2 before:border-b-2 before:border-slate-200 dark:before:border-slate-700 before:rounded-bl-xl">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold shadow-sm">
-                       T
+                       <img [src]="'personas/'+ item.useranswerimage" alt="{{ item.useranswer }}" class="rounded-full">
                     </div>
                     <div class="flex-1">
                        <div class="bg-red-50 dark:bg-red-900/10 p-3 rounded-2xl rounded-tl-none border border-red-100 dark:border-red-900/20 shadow-sm inline-block max-w-full">
@@ -54,10 +49,7 @@ export interface FaqItem {
                              {{ item.answer }}
                           </p>
                        </div>
-                       <div class="flex items-center gap-4 mt-1.5 ml-2">
-                          <span class="text-[10px] text-slate-400 dark:text-gray-500 font-medium">Hace un momento</span>
-                          <button class="text-[10px] font-bold text-slate-500 dark:text-gray-400 hover:text-primary transition-colors">Me gusta</button>
-                       </div>
+                       
                     </div>
                  </div>
               }
@@ -67,14 +59,8 @@ export interface FaqItem {
 
       </div>
 
-      <div class="mt-6 text-center">
-        <button class="text-xs font-bold text-primary hover:text-red-700 transition-colors">
-          Ver más comentarios
-        </button>
-      </div>
-
       <footer class="mt-8 py-4 text-center border-t border-slate-100 dark:border-white/5 transition-colors">
-        <a href="#" class="text-xs text-slate-400 dark:text-gray-500 hover:text-primary transition-colors">¿Necesitas ayuda?</a>
+        <a href="#" class="text-xs text-slate-400 dark:text-gray-500 hover:text-primary transition-colors">Copyright © 2026 TUKI-VET. Todos los derechos reservados.</a>
       </footer>
 
     </div>

@@ -141,19 +141,19 @@ export class FlowService {
       paymentDetails: {
         amount: "1.500 Bs",
         method: "⚠️ Pago en efectivo",
-        requirement: "Presentar recibo de pago de matrícula"
+        requirement: "Guarda tu Boleta de pago"
       },
       actionText: "TUKI-LISTO",
       nextStep: 6,
       faq: [
-        { initials: "❓", user: "CESAR", time: "Ahora", question: "¿Por qué el monto es elevado?", answer: "Porque es un pago único al inicio de la carrera. Durante los 5 años no volverás a cancelarlo ✅", useranswer: "VALERIA", userimage: "cesar.webp", useranswerimage: "valeria.webp" },
+        { initials: "❓", user: "CESAR", time: "Ahora", question: "¿Por qué el monto es elevado?", answer: "Porque es un pago único al inicio de la carrera. Durante los 5 años no volverás a cancelarlo.", useranswer: "VALERIA", userimage: "cesar.webp", useranswerimage: "valeria.webp" },
         { initials: "📲", user: "BRAYAN", time: "Hace un momento", question: "¿Puedo pagar por QR?", answer: "No. El pago debe realizarse solo en efectivo, ya que el personal verifica que el monto y los datos sean correctos.", useranswer: "LUCIANA", userimage: "brayan.webp", useranswerimage: "luciana.webp" },
         { initials: "🏥", user: "MAURICIO", time: "Hace un momento", question: "¿En qué se utiliza este dinero?", answer: "Contribuye a la compra de insumos para prácticas y materiales de laboratorio de la facultad 🧪", useranswer: "SOFIA", userimage: "mauricio.webp", useranswerimage: "sofia.webp" }
       ],
       imagenes: [
         "imagen.webp",
         "imagen2.webp",
-
+        "imagen3.webp"
       ]
     },
     {
