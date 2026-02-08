@@ -172,6 +172,9 @@ export class FlowService {
         { initials: "❓", user: "MARGARITA", time: "Ahora", question: "¿Para qué sirve la hojita de inscripción?", answer: "Es la que entregarás al CPD para inscribir tus materias 📝", useranswer: "GABRIEL", userimage: "margarita.webp", useranswerimage: "gabriel.webp" },
         { initials: "🚫", user: "DYRCE", time: "Hace un momento", question: "¿Qué pasa si no tengo la hojita?", answer: "Compra una o pide ayuda a tu Tuki-amigo para no quedarte sin inscribir ✅", useranswer: "PABLO", userimage: "dyrce.webp", useranswerimage: "pablo.webp" },
         { initials: "✏️", user: "ARIANE", time: "Hace un momento", question: "¿Debo colocar algo extra?", answer: "No, solo completa lo solicitado y llena los espacios requeridos", useranswer: "MOISES", userimage: "ariane.webp", useranswerimage: "moises.webp" }
+      ],
+      imagenes: [
+        "tukiboleta.webp"
       ]
     },
     {

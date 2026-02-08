@@ -93,12 +93,24 @@ import { StepData } from '../services/flow';
           @if (step().imagenes) {
             <div class="mb-6 grid grid-cols-3 gap-4">
               @for (imagen of step().imagenes; track imagen) {
-                <div 
-                  class="flex items-center justify-center h-20 w-full">
-                   <img [src]="'imagenes/' + imagen" class="max-w-full max-h-full object-contain" alt="modulo 228">
-                </div>
+                @if(!imagen.includes('tukiboleta')){
+                  <div 
+                    class="flex items-center justify-center h-20 w-full  ">
+                     <img [src]="'imagenes/' + imagen" class="max-w-full max-h-full object-contain" alt="modulo 228">
+                  </div>
+                }
               }
             </div>
+            <div class="mb-6 gap-4">
+              @if (step()?.imagenes?.[0] === 'tukiboleta.webp') {
+                <div class="flex items-center justify-center h-[400px] w-full ">
+                  <img 
+                    [src]="'imagenes/' + step()?.imagenes?.[0]" 
+                    class="max-w-full max-h-full object-contain" 
+                    alt="modulo 228">
+                </div>
+              }
+          </div>
           }
           
           <!-- Dynamic Content: Simple Details List -->
