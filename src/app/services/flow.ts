@@ -188,11 +188,11 @@ export class FlowService {
         "Recibos de pagos",
         "Código de registro"
       ],
-      actionText: "Finalizar trámite",
-      nextStep: null,
+      actionText: "TUKI-LISTO",
+      nextStep: 8,
       faq: [
-        { initials: "AP", user: "VALERIA", time: "5 horas", question: "¿Hay horario específico para presentar documentos?", useranswer: "CESAR", userimage: "valeria.webp", useranswerimage: "cesar.webp" },
-        { initials: "SL", user: "SOFIA", time: "2 días", question: "¿Puedo delegar la entrega a un familiar?", useranswer: "MAURICIO", userimage: "sofia.webp", useranswerimage: "mauricio.webp" }
+        { initials: "AP", user: "VALERIA", time: "5 horas", question: "¿Hay horario específico para presentar documentos?", answer: "Si, Horario continuo de 8:30 a 15:30", useranswer: "CESAR", userimage: "valeria.webp", useranswerimage: "cesar.webp" },
+        { initials: "SL", user: "SOFIA", time: "2 días", question: "¿Puedo delegar la entrega a un familiar?", answer: "No, Todo tramite es personal", useranswer: "MAURICIO", userimage: "sofia.webp", useranswerimage: "mauricio.webp" }
       ]
     },
     {
