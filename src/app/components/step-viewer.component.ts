@@ -78,16 +78,29 @@ import { StepData, FlowService } from '../services/flow';
               </div>
             </div>
           }
-          <!-- Dynamic Content: Bank Logos -->
+          <!-- Bank Logos Grid -->
           @if (step().bankLogos) {
             <div class="mb-6 grid grid-cols-3 gap-4">
               @for (logo of step().bankLogos; track logo) {
                 <div
-                  class="flex items-center justify-center h-20 w-full"
-                  [class.bg-[#00B4D8]/20]="logo.includes('Farmacorp')"
+                  class="flex items-center justify-center h-20 w-full transition-colors duration-300 shadow-sm"
+                  [class.bg-[#009FB8]]="logo.includes('Farmacorp')" 
+                  [class.dark:bg-[#00B4D8]/30]="logo.includes('Farmacorp')"
                   [class.rounded-[30%]]="logo.includes('Farmacorp')"
-                  [class.p-2]="logo.includes('Farmacorp')">
-                   <img [src]="'logosbancos/' + logo" loading="lazy" class="max-w-full max-h-full object-contain" alt="Bank Logo">
+                  [class.p-3]="logo.includes('Farmacorp')"
+
+
+
+                  [class.bg-dark-card]="!logo.includes('Farmacorp')" 
+                  [class.dark:bg-[#222831]/30]="!logo.includes('Farmacorp')"
+                  [class.rounded-xl]="!logo.includes('Farmacorp')"
+                  [class.p-2]="!logo.includes('Farmacorp')">
+                  
+                  <img 
+                    [src]="'logosbancos/' + logo" 
+                    loading="lazy" 
+                    class="max-w-full max-h-full object-contain" 
+                    alt="Bank Logo">
                 </div>
               }
             </div>
