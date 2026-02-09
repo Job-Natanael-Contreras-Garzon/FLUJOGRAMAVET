@@ -187,17 +187,51 @@ import { StepData, FlowService } from '../services/flow';
             <div class="mb-6">
                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
                  <span class="material-symbols-outlined text-primary">folder_open</span>
-                 Documentos Requeridos
+                 Selecciona los documentos que tienes
                </h4>
                <div class="grid grid-cols-1 gap-2">
                  @for (req of step().requirements; track req) {
-                   <label class="flex items-center gap-3 p-3 rounded-lg border border-slate-100 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-white/5 transition-colors cursor-pointer group">
-                      <div class="w-5 h-5 rounded border-2 border-slate-300 dark:border-slate-600 flex items-center justify-center group-hover:border-primary transition-colors">
-                        <span class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100">check</span>
-                      </div>
-                      <span class="text-sm text-slate-700 dark:text-gray-300">{{ req }}</span>
-                   </label>
-                 }
+  <div 
+    (click)="toggleRequirement(req)"
+    class="flex items-center gap-3 p-3 rounded-lg border transition-all duration-200 cursor-pointer group select-none"
+    [class.border-primary]="isReqSelected(req)"
+    [class.bg-primary/5]="isReqSelected(req)"
+    [class.dark:bg-primary/10]="isReqSelected(req)"
+    [class.border-slate-100]="!isReqSelected(req)"
+    [class.dark:border-white/5]="!isReqSelected(req)"
+    [class.hover:bg-slate-50]="!isReqSelected(req)"
+    [class.dark:hover:bg-white/5]="!isReqSelected(req)">
+    
+    <div 
+      class="w-5 h-5 rounded border-2 flex items-center justify-center transition-all duration-200"
+      [class.bg-primary]="isReqSelected(req)"
+      [class.border-primary]="isReqSelected(req)"
+      [class.border-slate-300]="!isReqSelected(req)"
+      [class.dark:border-slate-600]="!isReqSelected(req)"
+      [class.group-hover:border-primary]="!isReqSelected(req)">
+      
+      <span 
+        class="material-symbols-outlined text-sm font-bold transition-all duration-200 transform"
+        [class.text-white]="isReqSelected(req)"
+        [class.opacity-100]="isReqSelected(req)"
+        [class.scale-100]="isReqSelected(req)"
+        [class.opacity-0]="!isReqSelected(req)"
+        [class.scale-50]="!isReqSelected(req)">
+        check
+      </span>
+    </div>
+
+    <span 
+      class="text-sm transition-colors duration-200"
+      [class.text-slate-900]="isReqSelected(req)"
+      [class.dark:text-white]="isReqSelected(req)"
+      [class.font-medium]="isReqSelected(req)"
+      [class.text-slate-700]="!isReqSelected(req)"
+      [class.dark:text-gray-300]="!isReqSelected(req)">
+      {{ req }}
+    </span>
+  </div>
+}
                </div>
             </div>
           }
@@ -241,7 +275,7 @@ export class StepViewerComponent implements OnInit {
   back = output<void>();
   private flowService = inject(FlowService);
   private horarioService = inject(HorarioService);
-
+  selectedRequirements = signal<Set<string>>(new Set());
   // Schedule data
   scheduleData = signal<ScheduleData>(this.horarioService.getHorarioData());
   selectedGroup = signal<string | null>(null);
@@ -261,6 +295,20 @@ export class StepViewerComponent implements OnInit {
     return details.map(text => this.highlightText(text));
   });
 
+  toggleRequirement(req: string) {
+    this.selectedRequirements.update(set => {
+      const newSet = new Set(set);
+      if (newSet.has(req)) {
+        newSet.delete(req); // Si ya está, lo quita
+      } else {
+        newSet.add(req); // Si no está, lo agrega
+      }
+      return newSet;
+    });
+  }
+  isReqSelected(req: string): boolean {
+    return this.selectedRequirements().has(req);
+  }
   // ✅ Cargar total de pasos dinámicamente
   async ngOnInit() {
     const steps = await this.flowService.getSteps();
@@ -282,7 +330,7 @@ export class StepViewerComponent implements OnInit {
   }
 
   abrirWhatsapp(): void {
-    const url = 'https://chat.whatsapp.com/Htfy6ysFZQJA3JiVrZwA4m?mode=r_c';
+    const url = 'https://chat.whatsapp.com/IVznvrbX6nW7rfueJArv21';
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 

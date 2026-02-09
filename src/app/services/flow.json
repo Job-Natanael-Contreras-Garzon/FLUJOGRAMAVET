@@ -13,13 +13,13 @@
         "faq": [
             {
                 "initials": "❓",
-                "user": "ARIANE",
+                "user": "ALI",
                 "time": "Ahora",
                 "question": "¿Qué es ese código?",
                 "answer": "Es tu número único de estudiante, te identifica dentro de la UAGRM 🎓",
-                "useranswer": "CESAR",
-                "userimage": "ariane.webp",
-                "useranswerimage": "cesar.webp"
+                "useranswer": "CHIKI",
+                "userimage": "ali.webp",
+                "useranswerimage": "chiki.webp"
             },
             {
                 "initials": "📩",
@@ -72,18 +72,18 @@
                 "time": "Hace un momento",
                 "question": "¿La página no carga?",
                 "answer": "Verifica tu conexión a Internet o intenta ingresar desde otro dispositivo 📱💻",
-                "useranswer": "ARIANE",
+                "useranswer": "ALI",
                 "userimage": "mauricio.webp",
-                "useranswerimage": "ariane.webp"
+                "useranswerimage": "ali.webp"
             },
             {
                 "initials": "🌐",
-                "user": "CESAR",
+                "user": "CHIKI",
                 "time": "Hace un momento",
                 "question": "¿Como ingreso al perfil universitario?",
                 "answer": "En el buscador de google escribe : UAGRM PERFIL e ingresa al primer enlace ",
                 "useranswer": "LUCIANA",
-                "userimage": "cesar.webp",
+                "userimage": "chiki.webp",
                 "useranswerimage": "luciana.webp"
             }
         ]
@@ -107,18 +107,18 @@
                 "time": "Ahora",
                 "question": "¿Qué pasa si no cambio mi contraseña?",
                 "answer": "No podrás agarrar materias en el semestre regular ❌",
-                "useranswer": "DENILSON",
+                "useranswer": "SEGUNDO",
                 "userimage": "luciana.webp",
-                "useranswerimage": "denilson.webp"
+                "useranswerimage": "segundo.webp"
             },
             {
                 "initials": "🔑",
-                "user": "ARIANE",
+                "user": "ALI",
                 "time": "Hace un momento",
                 "question": "¿Qué contraseña puedo usar?",
                 "answer": "Debe incluir: ✔ letras mayúsculas y minúsculas, ✔ números, ✔ signos (recomendado)",
                 "useranswer": "NICOLAS",
-                "userimage": "ariane.webp",
+                "userimage": "ali.webp",
                 "useranswerimage": "nicolas.webp"
             },
             {
@@ -127,9 +127,9 @@
                 "time": "Hace un momento",
                 "question": "¿Olvidaste tu contraseña?",
                 "answer": "Ingresa a tu perfil universitario, haz clic en “Olvidé mi contraseña” y sigue el proceso de recuperación.",
-                "useranswer": "REIMAR",
+                "useranswer": "BRAYAN",
                 "userimage": "sofia.webp",
-                "useranswerimage": "reimar.webp"
+                "useranswerimage": "brayan.webp"
             }
         ]
     },
@@ -163,12 +163,12 @@
         "faq": [
             {
                 "initials": "❓",
-                "user": "ARIANE",
+                "user": "ALI",
                 "time": "Ahora",
                 "question": "¿Que incluye este pago?",
                 "answer": "Incluye lo siguiente:\n• Matrícula universitaria: 40 Bs\n• Actualización de datos personales: 25 Bs\n• Análisis de laboratorio: 120 Bs\n• Revisión médica: 80 Bs\n• Orientación vocacional: 3 Bs\n• Servicio fotográfico: 12 Bs\n• Aporte extraordinario C.U.B.: 20 Bs",
                 "useranswer": "PABLO",
-                "userimage": "ariane.webp",
+                "userimage": "ali.webp",
                 "useranswerimage": "pablo.webp"
             },
             {
@@ -178,12 +178,12 @@
                 "question": "¿Qué pasa si no cancelo?",
                 "answer": "No podrás inscribir materias.",
                 "useranswer": "MOISES",
-                "userimage": "margarita.webp",
+                "userimage": "dyrce.webp",
                 "useranswerimage": "moises.webp"
             },
             {
                 "initials": "🧾",
-                "user": "LUCIANA",
+                "user": "VALERA",
                 "time": "Hace un momento",
                 "question": "¿Por qué necesito la boleta de pago?",
                 "answer": "El CPD lo solicita al momento de inscribir tus materias. (guarda una copia)",
@@ -208,12 +208,12 @@
         "faq": [
             {
                 "initials": "❓",
-                "user": "CESAR",
+                "user": "CHIKI",
                 "time": "Ahora",
                 "question": "¿Por qué el monto es elevado?",
                 "answer": "Porque es un pago único al inicio de la carrera. Durante los 5 años no volverás a cancelarlo.",
                 "useranswer": "VALERIA",
-                "userimage": "cesar.webp",
+                "userimage": "chiki.webp",
                 "useranswerimage": "valeria.webp"
             },
             {
@@ -253,23 +253,33 @@
         "faq": [
             {
                 "initials": "AP",
-                "user": "VALERIA",
+                "user": "MARGARITA",
                 "time": "5 horas",
-                "question": "¿Hay horario específico para presentar documentos?",
-                "answer": "Si, Horario continuo de 8:30 a 15:30",
-                "useranswer": "CESAR",
-                "userimage": "valeria.webp",
-                "useranswerimage": "cesar.webp"
+                "question": "¿Puedo elegir los docentes?",
+                "answer": "No, los docentes están asignados según el grupo que elijas",
+                "useranswer": "CHIKI",
+                "userimage": "margarita.webp",
+                "useranswerimage": "chiki.webp"
             },
             {
                 "initials": "SL",
                 "user": "SOFIA",
                 "time": "2 días",
-                "question": "¿Puedo delegar la entrega a un familiar?",
-                "answer": "No, Todo tramite es personal",
+                "question": "¿Puedo elegir mas de un grupo?",
+                "answer": "No, en tu primer semestre inscribes en un solo grupo",
                 "useranswer": "MAURICIO",
                 "userimage": "sofia.webp",
                 "useranswerimage": "mauricio.webp"
+            },
+            {
+                "initials": "SL",
+                "user": "LUCIANA",
+                "time": "2 días",
+                "question": "¿Que hago si no hay cupo en el grupo que deseo?",
+                "answer": "Por ello tienes que estar atento a la fecha de inscripción y realizar los pagos con antelacion (siempre ten una segunda opcion de grupo)",
+                "useranswer": "NICOLAS",
+                "userimage": "luciana.webp",
+                "useranswerimage": "nicolas.webp"
             }
         ]
     },
@@ -314,18 +324,18 @@
                 "time": "Hace un momento",
                 "question": "¿Qué pasa si no tengo la hojita?",
                 "answer": "Compra una o pide ayuda a tu Tuki-amigo para no quedarte sin inscribir ✅",
-                "useranswer": "PABLO",
+                "useranswer": "BRAYAN",
                 "userimage": "dyrce.webp",
-                "useranswerimage": "pablo.webp"
+                "useranswerimage": "brayan.webp"
             },
             {
                 "initials": "✏️",
-                "user": "ARIANE",
+                "user": "ALI",
                 "time": "Hace un momento",
                 "question": "¿Debo colocar algo extra?",
                 "answer": "No, solo completa lo solicitado y llena los espacios requeridos",
                 "useranswer": "MOISES",
-                "userimage": "ariane.webp",
+                "userimage": "ali.webp",
                 "useranswerimage": "moises.webp"
             }
         ],
@@ -337,12 +347,11 @@
         "id": 8,
         "subtitle": "INSCRIBETE",
         "title": "¡Listo para inscribirte!",
-        "description": "Dirígete a la facultad con estos documentos:",
+        "description": "Dirígete al CPD de la facultad con estos documentos:",
         "requirements": [
-            "Hojita de inscripción",
+            "Hojita de inscripción (rellenada)",
             "Carnet de identidad original",
-            "Recibos de pagos",
-            "Código de registro"
+            "Recibos de pagos (aporte facultativo y matricula)"
         ],
         "actionText": "Finalizar trámite",
         "nextStep": null,
@@ -352,18 +361,20 @@
                 "user": "VALERIA",
                 "time": "5 horas",
                 "question": "¿Hay horario específico para presentar documentos?",
-                "useranswer": "CESAR",
+                "answer": "Si, el horario es de 8:30 AM a 15:30 PM",
+                "useranswer": "CHIKI",
                 "userimage": "valeria.webp",
-                "useranswerimage": "cesar.webp"
+                "useranswerimage": "chiki.webp"
             },
             {
                 "initials": "SL",
-                "user": "SOFIA",
+                "user": "MARGARITA",
                 "time": "2 días",
                 "question": "¿Puedo delegar la entrega a un familiar?",
-                "useranswer": "MAURICIO",
-                "userimage": "sofia.webp",
-                "useranswerimage": "mauricio.webp"
+                "answer": "No, toda entrega de documentos es personal",
+                "useranswer": "MOISES",
+                "userimage": "margarita.webp",
+                "useranswerimage": "moises.webp"
             }
         ]
     }
