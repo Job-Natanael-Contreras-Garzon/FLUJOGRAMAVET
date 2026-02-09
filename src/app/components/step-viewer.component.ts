@@ -1,4 +1,4 @@
-import { Component, input, output, signal, computed, inject } from '@angular/core';
+import { Component, input, output, signal, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaqComponent, FaqItem } from './faq.component';
 
@@ -199,7 +199,7 @@ import { StepData, FlowService } from '../services/flow';
   `,
   styles: []
 })
-export class StepViewerComponent {
+export class StepViewerComponent implements OnInit {
   step = input.required<StepData>();
   next = output<void>();
   back = output<void>();
@@ -229,12 +229,12 @@ export class StepViewerComponent {
 
   abrirWhatsapp(): void {
     const url = 'https://chat.whatsapp.com/Htfy6ysFZQJA3JiVrZwA4m?mode=r_c';
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   private highlightText(text: string): string {
     return text.replace(/(\d{9})/g, '<span class="text-primary dark:text-secondary font-mono font-bold">$1</span>')
-      .replace(/Perfil UAGRM/g, '<a href="https://perfil.uagrm.edu.bo/estudiantes/default.php" target="_blank" class="text-primary dark:text-secondary font-bold underline cursor-pointer hover:text-blue-600 transition-colors">Perfil UAGRM</a>');
+      .replace(/Perfil UAGRM/g, '<a href="https://perfil.uagrm.edu.bo/estudiantes/default.php" target="_blank" rel="noopener noreferrer" class="text-primary dark:text-secondary font-bold underline cursor-pointer hover:text-blue-600 transition-colors">Perfil UAGRM</a>');
   }
 
   handleAction() {

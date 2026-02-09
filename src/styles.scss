@@ -1,75 +1,8 @@
-/* Global Styles Updated for Toucan Theme */
-:root {
-  /* Brand Colors */
-  --color-primary: #E53935;
-  /* Red */
-  --color-accent: #FFD700;
-  /* Yellow Toucan */
-  --color-dark: #121212;
-  /* Main Dark */
-  --color-dark-surface: #1E1E1E;
-  /* Card Dark */
-  --color-light-bg: #F5F5F5;
-  --color-light-surface: #FFFFFF;
-
-  /* Defaults (Light Mode initial) */
-  --bg-app: var(--color-light-bg);
-  --bg-card: var(--color-light-surface);
-  --text-main: #212121;
-  --text-secondary: #616161;
-  --border-color: #E0E0E0;
-
-  --spacing-unit: 8px;
-  --border-radius-btn: 24px;
-  --font-family-main: 'Roboto', sans-serif;
-}
-
-/* Dark Mode Preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-app: var(--color-dark);
-    --bg-card: var(--color-dark-surface);
-    --text-main: #EEEEEE;
-    --text-secondary: #B0BEC5;
-    --border-color: #333333;
-  }
-}
-
-/* Force Dark Mode Class if user wants to toggle (optional, but good practice) */
-body.dark-theme {
-  --bg-app: var(--color-dark);
-  --bg-card: var(--color-dark-surface);
-  --text-main: #EEEEEE;
-  --text-secondary: #B0BEC5;
-  --border-color: #333333;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-family-main);
-  background-color: var(--bg-app);
-  color: var(--text-main);
-  -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s, color 0.3s;
-}
-
+/* Minimal global styles - Most styling handled by Tailwind */
 * {
   box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
-  color: var(--text-main);
+body {
   margin: 0;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* Toucan Details */
-.highlight-yellow {
-  color: var(--color-accent);
 }

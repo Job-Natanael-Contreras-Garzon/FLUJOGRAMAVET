@@ -10,8 +10,8 @@ import { FlowService, StepData } from './services/flow';
   imports: [CommonModule, WelcomeComponent, StepViewerComponent],
   template: `
     <main class="w-full min-h-screen relative overflow-hidden text-slate-900 dark:text-white transition-colors duration-300">
-      
-      <button 
+
+      <button
         (click)="toggleDarkMode()"
         class="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg text-slate-800 dark:text-white dark:bg-black/20 hover:scale-110 transition-transform"
         aria-label="Toggle Dark Mode">
@@ -26,10 +26,10 @@ import { FlowService, StepData } from './services/flow';
         <app-welcome (start)="goToStep(1)" />
       } @else {
         @if (currentStepData(); as data) {
-           <app-step-viewer 
-             [step]="data" 
-             (next)="handleNext(data.nextStep)" 
-             (back)="handleBack()" 
+           <app-step-viewer
+             [step]="data"
+             (next)="handleNext(data.nextStep)"
+             (back)="handleBack()"
            />
         }
       }
@@ -82,7 +82,10 @@ export class AppComponent {
     if (nextStepId !== null) {
       this.flowService.saveProgress(nextStepId);
       this.currentStepId.set(nextStepId);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Optimized scroll with requestAnimationFrame
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     } else {
       this.finish();
     }
@@ -92,7 +95,9 @@ export class AppComponent {
     const current = this.currentStepId();
     if (current > 1) {
       this.currentStepId.set(current - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     } else {
       this.currentStepId.set(0);
     }
