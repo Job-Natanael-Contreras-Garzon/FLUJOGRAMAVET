@@ -1,0 +1,712 @@
+{
+  "facultad": "Ciencias Veterinarias",
+  "semestre": "Primer Semestre",
+  "data_por_turno": {
+    "manana": [
+      {
+        "nombre": "Grupo A",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. EDUARDO YEVARA"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. RAÚL LÓPEZ"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. PAOLA ESPINOZA"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. BLANCA ELENA PAZ"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. TEDDY IBÁÑEZ"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "SAP100",
+                "a": "228-11"
+              },
+              {
+                "h": "08:30-10:00",
+                "s": "ZOT100",
+                "a": "228-11"
+              },
+              {
+                "h": "10:00-12:15",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "ZOT100",
+                "a": "228-11"
+              },
+              {
+                "h": "09:15-11:30",
+                "s": "VET100",
+                "a": "228-20"
+              },
+              {
+                "h": "11:30-13:00",
+                "s": "VET101",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "07:45-09:15",
+                "s": "SAP100",
+                "a": "228-11"
+              },
+              {
+                "h": "10:45-12:15",
+                "s": "ZOT100",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "07:00-09:15",
+                "s": "VET101",
+                "a": "228-11"
+              },
+              {
+                "h": "09:15-10:45",
+                "s": "VET100",
+                "a": "228-11"
+              },
+              {
+                "h": "10:45-12:15",
+                "s": "VET102",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "VET102",
+                "a": "228-11"
+              },
+              {
+                "h": "11:30-13:45",
+                "s": "VET101",
+                "a": "228-11"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Grupo B",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. EDUARDO YEVARA"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. RAÚL LÓPEZ"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. MOIRA MARTINEZ"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. BLANCA ELENA PAZ"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. FIDEL VILLEGAS"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "VET101",
+                "a": "228-12"
+              },
+              {
+                "h": "09:15-11:30",
+                "s": "VET102",
+                "a": "228-12"
+              },
+              {
+                "h": "11:30-13:00",
+                "s": "SAP100",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "VET101",
+                "a": "228-12"
+              },
+              {
+                "h": "09:15-10:45",
+                "s": "ZOT100",
+                "a": "228-12"
+              },
+              {
+                "h": "11:30-13:00",
+                "s": "VET100",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "VET100",
+                "a": "228-20"
+              },
+              {
+                "h": "09:15-10:45",
+                "s": "ZOT100",
+                "a": "228-12"
+              },
+              {
+                "h": "10:45-13:00",
+                "s": "SAP100",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "ZOT100",
+                "a": "228-12"
+              },
+              {
+                "h": "09:15-11:30",
+                "s": "VET101",
+                "a": "228-12"
+              },
+              {
+                "h": "12:15-13:45",
+                "s": "VET102",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "07:00-09:15",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Grupo E",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. EDUARDO YEVARA"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. ISAAC MANRIQUE"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. PABLO ROSALES"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. ERWIN VILLAGOMEZ"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. RODRIGO HOYOS"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "VET101",
+                "a": "228-13"
+              },
+              {
+                "h": "10:00-11:30",
+                "s": "VET102",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "SAP100",
+                "a": "228-13"
+              },
+              {
+                "h": "10:00-13:00",
+                "s": "VET102",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "ZOT100",
+                "a": "228-13"
+              },
+              {
+                "h": "10:45-13:00",
+                "s": "VET101",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "ZOT100",
+                "a": "228-13"
+              },
+              {
+                "h": "10:45-12:15",
+                "s": "VET100",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "SAP100",
+                "a": "228-13"
+              },
+              {
+                "h": "09:15-11:30",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tarde": [
+      {
+        "nombre": "Grupo C",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. EDUARDO YEVARA"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. MARGARITA RUCK"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. HIRENIO GONZALEZ"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. BLANCA ELENA PAZ"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. SANDRA GAMÓN"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "14:30-16:45",
+                "s": "VET101",
+                "a": "228-11"
+              },
+              {
+                "h": "16:45-19:00",
+                "s": "VET102",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "13:45-15:15",
+                "s": "VET101",
+                "a": "228-11"
+              },
+              {
+                "h": "15:15-17:30",
+                "s": "SAP100",
+                "a": "228-11"
+              },
+              {
+                "h": "17:30-19:45",
+                "s": "VET102",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "13:45-15:15",
+                "s": "SAP100",
+                "a": "228-11"
+              },
+              {
+                "h": "15:15-16:45",
+                "s": "VET100",
+                "a": "228-11"
+              },
+              {
+                "h": "17:30-19:00",
+                "s": "ZOT100",
+                "a": "228-11"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "13:45-15:15",
+                "s": "VET101",
+                "a": "228-11"
+              },
+              {
+                "h": "15:15-17:30",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "15:15-16:45",
+                "s": "VET100",
+                "a": "228-20"
+              },
+              {
+                "h": "18:15-19:45",
+                "s": "ZOT100",
+                "a": "228-11"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Grupo D",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. CARLOS RUIZ"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. MARGARITA RUCK"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. MOIRA MARTINEZ"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. BLANCA ELENA PAZ"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. TEDDY IBAÑEZ"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "13:00-14:30",
+                "s": "SAP100",
+                "a": "228-12"
+              },
+              {
+                "h": "15:15-16:45",
+                "s": "VET100",
+                "a": "228-12"
+              },
+              {
+                "h": "16:45-19:00",
+                "s": "VET101",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "12:15-14:30",
+                "s": "VET101",
+                "a": "228-12"
+              },
+              {
+                "h": "14:30-16:00",
+                "s": "VET102",
+                "a": "228-12"
+              },
+              {
+                "h": "16:45-19:00",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "14:30-16:00",
+                "s": "VET102",
+                "a": "228-12"
+              },
+              {
+                "h": "16:45-19:00",
+                "s": "VET101",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "13:00-15:15",
+                "s": "SAP100",
+                "a": "228-12"
+              },
+              {
+                "h": "16:45-18:15",
+                "s": "ZOT100",
+                "a": "228-12"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "13:45-15:15",
+                "s": "VET100",
+                "a": "228-20"
+              },
+              {
+                "h": "16:45-18:15",
+                "s": "ZOT100",
+                "a": "228-12"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Grupo F",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "DR. CARLOS RUIZ"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "DR. MARGARITA RUCK"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "DR. ADOLFO COLQUE"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "DR. ARCENIO ROMERO"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "DR. TEDDY IBAÑEZ"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "15:15-16:45",
+                "s": "ZOT100",
+                "a": "228-13"
+              },
+              {
+                "h": "16:45-18:15",
+                "s": "VET100",
+                "a": "228-13"
+              },
+              {
+                "h": "18:15-20:30",
+                "s": "VET102",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "15:15-16:45",
+                "s": "ZOT100",
+                "a": "228-13"
+              },
+              {
+                "h": "17:30-19:45",
+                "s": "VET102",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "14:30-16:00",
+                "s": "ZOT100",
+                "a": "228-13"
+              },
+              {
+                "h": "16:45-19:00",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "13:45-15:15",
+                "s": "VET100",
+                "a": "228-13"
+              },
+              {
+                "h": "15:15-17:30",
+                "s": "SAP100",
+                "a": "228-13"
+              },
+              {
+                "h": "17:30-19:45",
+                "s": "VET101",
+                "a": "228-13"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "14:30-17:30",
+                "s": "SAP100",
+                "a": "228-13"
+              },
+              {
+                "h": "17:30-20:30",
+                "s": "VET101",
+                "a": "228-13"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

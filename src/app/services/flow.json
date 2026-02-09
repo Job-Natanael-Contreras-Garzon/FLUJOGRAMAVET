@@ -245,6 +245,36 @@
     },
     {
         "id": 6,
+        "subtitle": "ELIGE TU HORARIO",
+        "title": "¡Elige tu grupo y horario!",
+        "description": "Selecciona el turno y grupo que mejor se acomode a tus necesidades:",
+        "actionText": "TUKI-LISTO",
+        "nextStep": 7,
+        "faq": [
+            {
+                "initials": "AP",
+                "user": "VALERIA",
+                "time": "5 horas",
+                "question": "¿Hay horario específico para presentar documentos?",
+                "answer": "Si, Horario continuo de 8:30 a 15:30",
+                "useranswer": "CESAR",
+                "userimage": "valeria.webp",
+                "useranswerimage": "cesar.webp"
+            },
+            {
+                "initials": "SL",
+                "user": "SOFIA",
+                "time": "2 días",
+                "question": "¿Puedo delegar la entrega a un familiar?",
+                "answer": "No, Todo tramite es personal",
+                "useranswer": "MAURICIO",
+                "userimage": "sofia.webp",
+                "useranswerimage": "mauricio.webp"
+            }
+        ]
+    },
+    {
+        "id": 7,
         "subtitle": "TUKI INSCRIPCION",
         "title": "📝 Rellena tu Boleta",
         "description": "Obtén tu hojita de inscripción en:",
@@ -266,7 +296,7 @@
             }
         ],
         "actionText": "TUKI-LISTO",
-        "nextStep": 7,
+        "nextStep": 8,
         "faq": [
             {
                 "initials": "❓",
@@ -301,42 +331,6 @@
         ],
         "imagenes": [
             "tukiboleta.webp"
-        ]
-    },
-    {
-        "id": 7,
-        "subtitle": "ELIGE TU HORARIO",
-        "title": "¡Listo para inscribirte!",
-        "description": "Dirígete a la facultad con estos documentos:",
-        "requirements": [
-            "Hojita de inscripción",
-            "Carnet de identidad original",
-            "Recibos de pagos",
-            "Código de registro"
-        ],
-        "actionText": "TUKI-LISTO",
-        "nextStep": 8,
-        "faq": [
-            {
-                "initials": "AP",
-                "user": "VALERIA",
-                "time": "5 horas",
-                "question": "¿Hay horario específico para presentar documentos?",
-                "answer": "Si, Horario continuo de 8:30 a 15:30",
-                "useranswer": "CESAR",
-                "userimage": "valeria.webp",
-                "useranswerimage": "cesar.webp"
-            },
-            {
-                "initials": "SL",
-                "user": "SOFIA",
-                "time": "2 días",
-                "question": "¿Puedo delegar la entrega a un familiar?",
-                "answer": "No, Todo tramite es personal",
-                "useranswer": "MAURICIO",
-                "userimage": "sofia.webp",
-                "useranswerimage": "mauricio.webp"
-            }
         ]
     },
     {

@@ -1,13 +1,15 @@
 import { Component, input, output, signal, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaqComponent, FaqItem } from './faq.component';
+import { ScheduleSelectorComponent, ScheduleData } from './schedule-selector.component';
+import { HorarioService } from '../services/horario';
 
 import { StepData, FlowService } from '../services/flow';
 
 @Component({
   selector: 'app-step-viewer',
   standalone: true,
-  imports: [CommonModule, FaqComponent],
+  imports: [CommonModule, FaqComponent, ScheduleSelectorComponent],
   template: `
     <div class="min-h-screen flex flex-col bg-[#f8f6f6] dark:bg-dark-bg transition-colors duration-300">
 
@@ -146,7 +148,28 @@ import { StepData, FlowService } from '../services/flow';
             </div>
           }
 
+          <!-- Dynamic Content: Schedule Selector (Step 6) -->
+          @if (step().id === 6) {
+            <div class="mb-6">
+              @if (scheduleData(); as data) {
+                <app-schedule-selector 
+                  [data]="data" 
+                  (selected)="onGroupSelected($event)"
+                />
+              }
+              @if (selectedGroup()) {
+                <div class="mt-4 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700/30 rounded-lg">
+                  <p class="text-sm font-bold text-green-800 dark:text-green-100 flex items-center gap-2">
+                    <span class="material-symbols-outlined">check_circle</span>
+                    Has seleccionado: {{ selectedGroup() }}
+                  </p>
+                </div>
+              }
+            </div>
+          }
+
           <!-- Dynamic Content: Final Requirements Checklist -->
+
           @if (step().requirements) {
             <div class="mb-6">
                <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
@@ -204,7 +227,11 @@ export class StepViewerComponent implements OnInit {
   next = output<void>();
   back = output<void>();
   private flowService = inject(FlowService);
+  private horarioService = inject(HorarioService);
 
+  // Schedule data
+  scheduleData = signal<ScheduleData>(this.horarioService.getHorarioData());
+  selectedGroup = signal<string | null>(null);
 
   // ✅ Signal para total de pasos (dinámico)
   totalSteps = signal<number>(8);
@@ -225,6 +252,20 @@ export class StepViewerComponent implements OnInit {
   async ngOnInit() {
     const steps = await this.flowService.getSteps();
     this.totalSteps.set(steps.length);
+
+    // Load schedule data for step 6
+    if (this.step().id === 6) {
+      try {
+        const horarioData = this.horarioService.getHorarioData();
+        this.scheduleData.set(horarioData);
+      } catch (error) {
+        console.error('Error loading schedule data:', error);
+      }
+    }
+  }
+
+  onGroupSelected(groupName: string) {
+    this.selectedGroup.set(groupName);
   }
 
   abrirWhatsapp(): void {
