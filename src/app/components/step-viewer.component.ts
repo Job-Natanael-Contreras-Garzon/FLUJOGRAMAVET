@@ -10,7 +10,7 @@ import { StepData, FlowService } from '../services/flow';
   imports: [CommonModule, FaqComponent],
   template: `
     <div class="min-h-screen flex flex-col bg-[#f8f6f6] dark:bg-dark-bg transition-colors duration-300">
-      
+
       <!-- Header -->
       <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md sticky top-0 z-20 px-4 py-3 flex items-center shadow-sm dark:shadow-black/20 border-b border-transparent dark:border-white/5 transition-colors duration-300">
         <button (click)="back.emit()" class="p-2 -ml-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-white transition-colors" aria-label="Volver atrás">
@@ -22,7 +22,7 @@ import { StepData, FlowService } from '../services/flow';
       </header>
 
       <div class="flex-1 max-w-md mx-auto w-full p-4 pb-24">
-        
+
         <!-- Progress Bar -->
         <div class="mb-6">
           <div class="flex justify-between items-end mb-2">
@@ -30,7 +30,7 @@ import { StepData, FlowService } from '../services/flow';
             <span class="text-xs font-bold text-secondary">{{ progressPercentage() }}%</span>
           </div>
           <div class="h-2 w-full bg-slate-200 dark:bg-zinc-700 rounded-full overflow-hidden">
-            <div 
+            <div
               class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-500 shadow-md"
               [style.width.%]="progressPercentage()">
             </div>
@@ -39,7 +39,7 @@ import { StepData, FlowService } from '../services/flow';
 
         <!-- Main Card -->
         <div class="bg-white dark:bg-dark-card rounded-[2rem] shadow-sm p-6 mb-8 border border-slate-100 dark:border-white/5 transition-colors duration-300 relative overflow-hidden">
-          
+
           <!-- Title & Description -->
           <h3 class="text-center text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">
             {{ step().title }}
@@ -48,7 +48,7 @@ import { StepData, FlowService } from '../services/flow';
             {{ step().description }}
           </p>
 
-          
+
           <!-- Dynamic Content: Payment Details -->
           @if (step().paymentDetails; as pay) {
             <div class="bg-slate-50 dark:bg-white/5 rounded-xl p-5 mb-6 border border-slate-100 dark:border-white/5">
@@ -80,12 +80,12 @@ import { StepData, FlowService } from '../services/flow';
           @if (step().bankLogos) {
             <div class="mb-6 grid grid-cols-3 gap-4">
               @for (logo of step().bankLogos; track logo) {
-                <div 
+                <div
                   class="flex items-center justify-center h-20 w-full"
                   [class.bg-[#00B4D8]/20]="logo.includes('Farmacorp')"
                   [class.rounded-[30%]]="logo.includes('Farmacorp')"
                   [class.p-2]="logo.includes('Farmacorp')">
-                   <img [src]="'logosbancos/' + logo" class="max-w-full max-h-full object-contain" alt="Bank Logo">
+                   <img [src]="'logosbancos/' + logo" loading="lazy" class="max-w-full max-h-full object-contain" alt="Bank Logo">
                 </div>
               }
             </div>
@@ -94,33 +94,33 @@ import { StepData, FlowService } from '../services/flow';
             <div class="mb-6 grid grid-cols-3 gap-4">
               @for (imagen of step().imagenes; track imagen) {
                 @if(!imagen.includes('tukiboleta')){
-                  <div 
+                  <div
                     class="flex items-center justify-center h-20 w-full  ">
-                     <img [src]="'imagenes/' + imagen" class="max-w-full max-h-full object-contain" alt="modulo 228">
+                     <img [src]="'imagenes/' + imagen" loading="lazy" class="max-w-full max-h-full object-contain" alt="modulo 228">
                   </div>
                 }
               }
             </div>
             <div class="mb-6 gap-4">
-              @if (step()?.imagenes?.[0] === 'tukiboleta.webp') {
+              @if (step().imagenes?.[0] === 'tukiboleta.webp') {
                 <div class="flex items-center justify-center h-[360px] w-full ">
-                  <img 
-                    [src]="'imagenes/' + step()?.imagenes?.[0]" 
-                    class="max-w-full max-h-full object-contain" 
+                  <img
+                    [src]="'imagenes/' + step().imagenes?.[0]"
+                    class="max-w-full max-h-full object-contain"
                     alt="modulo 228">
                 </div>
               }
           </div>
           }
-          
+
           <!-- Dynamic Content: Simple Details List -->
           @if (step().details) {
             <div class="bg-slate-50 dark:bg-white/5 rounded-xl p-4 mb-6 border border-slate-100 dark:border-white/5">
               <ul class="space-y-3">
-                @for (detail of step().details; track detail) {
+                @for (detail of processedDetails(); track detail) {
                   <li class="flex gap-3 text-sm text-slate-700 dark:text-gray-300">
                     <span class="material-symbols-outlined text-primary text-lg flex-shrink-0">check_small</span>
-                    <span [innerHTML]="highlightText(detail)"></span>
+                    <span [innerHTML]="detail"></span>
                   </li>
                 }
               </ul>
@@ -168,7 +168,7 @@ import { StepData, FlowService } from '../services/flow';
 
           <!-- Actions -->
           <div class="space-y-3 mt-8">
-            <button 
+            <button
               (click)="handleAction()"
               class="w-full h-14 rounded-full flex items-center justify-center gap-2 transition-all duration-300 font-bold text-base shadow-lg hover:shadow-xl active:scale-95 bg-primary text-white shadow-primary/30">
               <span>{{ step().actionText }}</span>
@@ -184,7 +184,7 @@ import { StepData, FlowService } from '../services/flow';
       </div>
 
       <!-- Floating Chat Button: WhatsApp -->
-      <button 
+      <button
   type="button"
   (click)="abrirWhatsapp()"
   class="fixed bottom-24 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl shadow-green-500/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-30"
@@ -204,34 +204,35 @@ export class StepViewerComponent {
   next = output<void>();
   back = output<void>();
   private flowService = inject(FlowService);
-  
+
+
+  // ✅ Signal para total de pasos (dinámico)
+  totalSteps = signal<number>(8);
+
+  // ✅ Computed memoizado para el porcentaje de progreso
+  progressPercentage = computed(() => {
+    return Math.round((this.step().id / this.totalSteps()) * 100);
+  });
+
+  // ✅ Computed memoizado para procesar detalles (evita regex en cada render)
+  processedDetails = computed(() => {
+    const details = this.step().details;
+    if (!details) return [];
+    return details.map(text => this.highlightText(text));
+  });
+
+  // ✅ Cargar total de pasos dinámicamente
+  async ngOnInit() {
+    const steps = await this.flowService.getSteps();
+    this.totalSteps.set(steps.length);
+  }
+
   abrirWhatsapp(): void {
     const url = 'https://chat.whatsapp.com/Htfy6ysFZQJA3JiVrZwA4m?mode=r_c';
     window.open(url, '_blank');
   }
-  progressPercentage = computed(() => {
-    // Dinamically get total steps from FlowService
-    const totalSteps = this.flowService.getSteps().length;
-    return Math.round((this.step().id / totalSteps) * 100);
-  });
 
-  getIcon(): string {
-    const map: Record<number, string> = {
-      1: 'mark_email_read',
-      2: 'login',
-      3: 'lock_reset',
-      4: 'payments',
-      5: 'account_balance_wallet',
-      6: 'print',
-      7: 'school',
-      8: 'task_alt'
-    };
-    return map[this.step().id] || 'info';
-  }
-
-  highlightText(text: string): string {
-    // Simple regex to bold numbers or codes in brackets [code] or just digits
-    // Replacing [text] with yellow highlight span
+  private highlightText(text: string): string {
     return text.replace(/(\d{9})/g, '<span class="text-primary dark:text-secondary font-mono font-bold">$1</span>')
       .replace(/Perfil UAGRM/g, '<a href="https://perfil.uagrm.edu.bo/estudiantes/default.php" target="_blank" class="text-primary dark:text-secondary font-bold underline cursor-pointer hover:text-blue-600 transition-colors">Perfil UAGRM</a>');
   }

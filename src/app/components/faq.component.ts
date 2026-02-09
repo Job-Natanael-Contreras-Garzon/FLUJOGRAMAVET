@@ -26,7 +26,7 @@ export interface FaqItem {
           <!-- Main Question -->
           <div class="flex gap-3 animate-fade-in group">
             <div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 text-[10px] font-bold shadow-sm ring-2 ring-white dark:ring-transparent">
-              <img [src]="'personas/'+ item.userimage" alt="{{ item.user }}" class="rounded-full">
+              <img [src]="'personas/'+ item.userimage" alt="{{ item.user }}" loading="lazy" class="rounded-full">
             </div>
             <div class="flex-1">
               <div class="bg-white dark:bg-dark-card p-3 rounded-2xl rounded-tl-none border border-slate-100 dark:border-white/5 shadow-sm inline-block max-w-[90%] transition-colors duration-300">
@@ -40,7 +40,7 @@ export interface FaqItem {
               @if (item.answer) {
                  <div class="mt-4 flex gap-3 relative before:absolute before:left-[-20px] before:top-[-20px] before:h-[40px] before:w-[12px] before:border-l-2 before:border-b-2 before:border-slate-200 dark:before:border-slate-700 before:rounded-bl-xl">
                     <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[10px] font-bold shadow-sm">
-                       <img [src]="'personas/'+ item.useranswerimage" alt="{{ item.useranswer }}" class="rounded-full">
+                       <img [src]="'personas/'+ item.useranswerimage" alt="{{ item.useranswer }}" loading="lazy" class="rounded-full">
                     </div>
                     <div class="flex-1">
                        <div class="bg-red-50 dark:bg-red-900/10 p-3 rounded-2xl rounded-tl-none border border-red-100 dark:border-red-900/20 shadow-sm inline-block max-w-full">

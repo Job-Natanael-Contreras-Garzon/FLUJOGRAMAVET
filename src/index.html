@@ -5,13 +5,18 @@
   <title>Inscripción Veterinaria</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Tailwind CSS -->
+
+  <!-- Preconnect para optimizar carga de recursos externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+  <!-- Tailwind CSS - Carga síncrona para evitar FOUC -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Fonts: Inter & Material Symbols -->
+
+  <!-- Fonts: Inter & Material Symbols con display=swap para evitar FOIT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = {

@@ -7,9 +7,9 @@ import { Component, output } from '@angular/core';
     <div class="relative h-screen w-full flex flex-col items-center justify-center p-6">
       <!-- Background Image & Overlay -->
       <div class="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=2070&auto=format&fit=crop" 
-          alt="Veterinary Background" 
+        <img
+          src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=2070&auto=format&fit=crop"
+          alt="Veterinary Background"
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm dark:bg-black/80 transition-all duration-300"></div>
@@ -17,13 +17,13 @@ import { Component, output } from '@angular/core';
 
       <!-- Content Card -->
       <div class="relative z-10 w-full max-w-sm bg-white dark:bg-dark-card/90 dark:backdrop-blur-md rounded-3xl p-8 shadow-2xl animate-fade-in-up border border-transparent dark:border-white/10 transition-colors duration-300">
-        
+
         <!-- Logo -->
         <div class="flex justify-center mb-6">
           <div class="relative w-32 h-32 transition-transform duration-300 hover:scale-110">
-            <img 
-               src="/logoTuki.webp" 
-               alt="Tuki Logo" 
+            <img
+               src="/logoTuki.webp"
+               alt="Tuki Logo"
                class="w-full h-full object-contain drop-shadow-xl"
             />
           </div>
@@ -33,7 +33,7 @@ import { Component, output } from '@angular/core';
         <h1 class="text-2xl font-extrabold text-center text-slate-900 dark:text-white mb-4 leading-tight">
           🎉 Bienvenid@ a Medicina Veterinaria y Zootecnia
         </h1>
-        
+
         <div class="w-10 h-1 bg-red-100 dark:bg-red-900 mx-auto rounded-full mb-6"></div>
 
         <p class="text-center text-slate-500 dark:text-gray-400 text-sm font-medium mb-8 leading-relaxed">
@@ -43,14 +43,14 @@ import { Component, output } from '@angular/core';
         </p>
 
         <!-- Button -->
-        <button 
+        <button
           (click)="start.emit()"
           class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-red-500/30 dark:shadow-red-900/50 transition-all transform active:scale-95 group">
           <span>✨ ¡Tuki-éxitos! Comencemos ✨</span>
         </button>
 
       </div>
-      
+
       <div class="relative z-10 mt-8 text-white/40 text-xs font-semibold tracking-widest uppercase">
         Facultad de Ciencias Veterinarias
       </div>
