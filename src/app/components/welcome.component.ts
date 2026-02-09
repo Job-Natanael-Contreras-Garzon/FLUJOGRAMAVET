@@ -8,12 +8,9 @@ import { Component, output } from '@angular/core';
       <!-- Background Image & Overlay -->
       <div class="absolute inset-0 z-0">
         <img
-          src="/imagenes/herofondo.webp"
+          src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=2070&auto=format&fit=crop"
           alt="Veterinary Background"
           class="w-full h-full object-cover"
-          width="1410"
-          height="940"
-          loading="eager"
         />
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm dark:bg-black/80 transition-all duration-300"></div>
       </div>
@@ -28,9 +25,6 @@ import { Component, output } from '@angular/core';
                src="/logoTuki.webp"
                alt="Tuki Logo"
                class="w-full h-full object-contain drop-shadow-xl"
-               width="128"
-               height="128"
-               fetchpriority="high"
             />
           </div>
         </div>
