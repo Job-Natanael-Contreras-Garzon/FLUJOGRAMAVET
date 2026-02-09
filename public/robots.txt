@@ -7,7 +7,7 @@ Disallow: /assets/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://infovet.vercel.app/sitemap.xml
+Sitemap: https://tukiweb.vercel.app/sitemap.xml
 
 # Seguridad: Bloquear rastreadores maliciosos comunes
 User-agent: AhrefsBot

@@ -4,19 +4,19 @@
 
   <!-- Página Principal / Bienvenida -->
   <url>
-    <loc>https://infovet.vercel.app/</loc>
+    <loc>https://tukiweb.vercel.app/</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://infovet.vercel.app/" />
+      href="https://tukiweb.vercel.app/" />
   </url>
 
   <!-- Robots.txt -->
   <url>
-    <loc>https://infovet.vercel.app/robots.txt</loc>
+    <loc>https://tukiweb.vercel.app/robots.txt</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -24,7 +24,7 @@
 
   <!-- Security.txt -->
   <url>
-    <loc>https://infovet.vercel.app/.well-known/security.txt</loc>
+    <loc>https://tukiweb.vercel.app/.well-known/security.txt</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>

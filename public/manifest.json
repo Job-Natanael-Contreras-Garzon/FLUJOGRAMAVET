@@ -1,6 +1,6 @@
 {
-  "name": "FlujogramaVet - Guía de Inscripción Veterinaria UAGRM",
-  "short_name": "FlujogramaVet",
+  "name": "TUKIWEB - Guía de Inscripción Veterinaria UAGRM",
+  "short_name": "TUKIWEB",
   "description": "Guía interactiva paso a paso para la inscripción en la carrera de Veterinaria UAGRM",
   "start_url": "/",
   "scope": "/",
@@ -8,7 +8,10 @@
   "background_color": "#f8f6f6",
   "theme_color": "#ef4444",
   "orientation": "portrait-primary",
-  "categories": ["education", "utilities"],
+  "categories": [
+    "education",
+    "utilities"
+  ],
   "lang": "es-BO",
   "dir": "ltr",
   "icons": [
