@@ -39,7 +39,7 @@ import { FlowService, StepData } from './services/flow';
   `,
 })
 export class AppComponent {
-    currentStepId = signal<number>(0); // 0 = Welcome, 1-7 = Steps
+    currentStepId = signal<number>(0); // 0 = Welcome, 1-n = Steps (dynamic from FlowService)
     isDarkMode = signal<boolean>(false);
     private _doc = inject(DOCUMENT);
     private flowService = inject(FlowService);

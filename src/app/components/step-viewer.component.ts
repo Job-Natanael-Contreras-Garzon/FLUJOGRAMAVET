@@ -1,8 +1,8 @@
-import { Component, input, output, signal, computed } from '@angular/core';
+import { Component, input, output, signal, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaqComponent, FaqItem } from './faq.component';
 
-import { StepData } from '../services/flow';
+import { StepData, FlowService } from '../services/flow';
 
 @Component({
   selector: 'app-step-viewer',
@@ -203,13 +203,15 @@ export class StepViewerComponent {
   step = input.required<StepData>();
   next = output<void>();
   back = output<void>();
+  private flowService = inject(FlowService);
+  
   abrirWhatsapp(): void {
     const url = 'https://chat.whatsapp.com/Htfy6ysFZQJA3JiVrZwA4m?mode=r_c';
     window.open(url, '_blank');
   }
   progressPercentage = computed(() => {
-    // Assuming 7 steps total based on input data
-    const totalSteps = 7;
+    // Dinamically get total steps from FlowService
+    const totalSteps = this.flowService.getSteps().length;
     return Math.round((this.step().id / totalSteps) * 100);
   });
 
@@ -222,7 +224,7 @@ export class StepViewerComponent {
       5: 'account_balance_wallet',
       6: 'print',
       7: 'school',
-
+      8: 'task_alt'
     };
     return map[this.step().id] || 'info';
   }
