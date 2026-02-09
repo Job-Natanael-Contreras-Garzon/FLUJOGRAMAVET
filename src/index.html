@@ -56,14 +56,16 @@
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="dns-prefetch" href="https://esm.sh">
 
+  <!-- Preload crítico: Logo y fuente de iconos -->
   <link rel="preload" as="image" href="/logoTuki.webp" fetchpriority="high">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=block">
 
-<!-- Tailwind CSS - Carga asíncrona con fallback -->
-  <script src="https://cdn.tailwindcss.com" ></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts: Inter optimizado (solo 400,600,700) & Material Symbols con display=swap -->
+  <!-- Fonts: Inter optimizado & Material Symbols (display=block evita mostrar texto fallback) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=block" rel="stylesheet" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -92,6 +94,18 @@
     }
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      /* Evitar mostrar texto mientras carga la fuente */
+      font-display: block;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      /* Ocultar overflow de texto fallback */
+      display: inline-block;
+      overflow: hidden;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      text-align: center;
     }
     /* Custom scrollbar for cleaner look */
     ::-webkit-scrollbar {

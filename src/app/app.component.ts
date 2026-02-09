@@ -13,12 +13,13 @@ import { FlowService, StepData } from './services/flow';
 
       <button
         (click)="toggleDarkMode()"
-        class="fixed top-4 right-4 z-50 p-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg text-slate-800 dark:text-white dark:bg-black/20 hover:scale-110 transition-transform"
-        aria-label="Toggle Dark Mode">
+        class="fixed top-4 right-4 z-50 w-10 h-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg text-slate-800 dark:text-white dark:bg-black/20 hover:scale-110 transition-all duration-200"
+        aria-label="Toggle Dark Mode"
+        [attr.aria-pressed]="isDarkMode()">
         @if (isDarkMode()) {
-          <span class="material-symbols-outlined">light_mode</span>
+          <span class="material-symbols-outlined" style="font-size: 20px;">dark_mode</span>
         } @else {
-          <span class="material-symbols-outlined">dark_mode</span>
+          <span class="material-symbols-outlined" style="font-size: 20px;">light_mode</span>
         }
       </button>
 
@@ -39,7 +40,7 @@ import { FlowService, StepData } from './services/flow';
 })
 export class AppComponent {
   currentStepId = signal<number>(0);
-  isDarkMode = signal<boolean>(false);
+  isDarkMode = signal<boolean>(true);
   private _doc = inject(DOCUMENT);
   private flowService = inject(FlowService);
 
