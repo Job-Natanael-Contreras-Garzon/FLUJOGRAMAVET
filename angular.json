@@ -57,7 +57,8 @@
                 "fonts": true
               },
               "sourceMap": false,
-              "namedChunks": false
+              "namedChunks": false,
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
