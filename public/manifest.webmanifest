@@ -1,9 +1,14 @@
 {
-  "name": "flujograma-vet",
-  "short_name": "flujograma-vet",
+  "name": "Info TukiVet - Guía de Inscripción Veterinaria UAGRM",
+  "short_name": "TukiVet",
+  "description": "Guía completa y actualizada para la inscripción en la carrera de Veterinaria UAGRM 2026. Instrucciones paso a paso, requisitos, costos y ubicaciones.",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "#ef4444",
+  "background_color": "#f8f6f6",
+  "orientation": "portrait-primary",
+  "lang": "es-BO",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
@@ -53,5 +58,10 @@
       "type": "image/png",
       "purpose": "maskable any"
     }
-  ]
+  ],
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "screenshots": []
 }
