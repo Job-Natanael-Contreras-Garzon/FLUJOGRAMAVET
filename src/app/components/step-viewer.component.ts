@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FaqComponent, FaqItem } from './faq.component';
 import { ScheduleSelectorComponent, ScheduleData } from './schedule-selector.component';
 import { HorarioService } from '../services/horario';
-import confetti from 'canvas-confetti';
 
 import { StepData, FlowService } from '../services/flow';
 
@@ -437,7 +436,10 @@ export class StepViewerComponent implements OnInit {
     }, 50);
   }
 
-  private launchConfetti() {
+  private async launchConfetti() {
+    // Lazy load confetti only when needed (final step)
+    const { default: confetti } = await import('canvas-confetti');
+    
     const duration = 3000;
     const end = Date.now() + duration;
 
