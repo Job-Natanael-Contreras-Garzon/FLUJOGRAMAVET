@@ -441,8 +441,11 @@ export class StepViewerComponent implements OnInit {
     const duration = 3000;
     const end = Date.now() + duration;
 
+    // Create a local instance that doesn't use a worker
+    const myConfetti = confetti.create(undefined, { resize: true, useWorker: false });
+
     (function frame() {
-      const left = confetti({
+      myConfetti({
         particleCount: 2,
         angle: 60,
         spread: 55,
@@ -450,7 +453,7 @@ export class StepViewerComponent implements OnInit {
         colors: ['#FEDB39', '#FF0000', '#000000']
       });
 
-      const right = confetti({
+      myConfetti({
         particleCount: 2,
         angle: 120,
         spread: 55,
