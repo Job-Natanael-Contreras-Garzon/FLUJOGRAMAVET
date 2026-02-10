@@ -26,5 +26,31 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "external-fonts",
+      "urls": [
+        "https://fonts.googleapis.com/**",
+        "https://fonts.gstatic.com/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "7d"
+      }
+    },
+    {
+      "name": "external-cdn",
+      "urls": [
+        "https://cdn.tailwindcss.com/**",
+        "https://esm.sh/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 50,
+        "maxAge": "1d"
+      }
+    }
   ]
 }

@@ -72,7 +72,7 @@ This application is fully optimized for search engines and can be installed as a
 - **[SEO-COMPLETE.md](SEO-COMPLETE.md)**: Comprehensive SEO guide and report
 - **[ICONS-GUIDE.md](ICONS-GUIDE.md)**: How to generate PWA icons
 - **sitemap.xml**: Located at `/sitemap.xml` after deployment
-- **manifest.json**: PWA configuration
+- **manifest.webmanifest**: PWA configuration
 
 ### 🚀 Post-Deployment SEO Tasks
 
