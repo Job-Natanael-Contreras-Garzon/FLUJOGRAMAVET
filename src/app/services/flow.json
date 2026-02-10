@@ -5,7 +5,7 @@
         "title": "Habilitación del registro",
         "description": "Revisa el correo electrónico que utilizaste en tu preinscripción.",
         "details": [
-            " Recibirás un código de 9 dígitos ej.: 222084006",
+            " Recibirás un código de 9 dígitos ej.: 222085444",
             " Con este codigo podras ingresar a tu perfil universitario"
         ],
         "actionText": "TUKI-LISTO",
@@ -50,7 +50,7 @@
         "description": "Ingresa al link 🔗, selecciona la opción Estudiante y completa los datos",
         "details": [
             "Click aqui 🔗: Perfil UAGRM",
-            "Registro: 218007663",
+            "Registro: (tú registro)(ej.:222085444)",
             "Contraseña 🔑: Ingresa tu Número de C. I."
         ],
         "actionText": "TUKI-LISTO",
@@ -290,6 +290,11 @@
         "description": "Obtén tu hojita de inscripción en:",
         "locations": [
             {
+                "place": "🎁 Tuki-amigos",
+                "cost": "Gratis",
+                "notes": "Estarán regalando hojas el día de la inscripción"
+            },
+            {
                 "place": "Fotocopiadora",
                 "cost": "2x50 ctv",
                 "notes": "Compra tu hojita aquí"
@@ -298,11 +303,6 @@
                 "place": "Centro Interno",
                 "cost": "Gratis",
                 "notes": "Solicítala sin costo"
-            },
-            {
-                "place": "🎁 Tuki-amigos",
-                "cost": "Gratis",
-                "notes": "Estarán regalando hojas el día de la inscripción"
             }
         ],
         "actionText": "TUKI-LISTO",
@@ -354,7 +354,7 @@
             "Recibos de pagos (aporte facultativo y matricula)"
         ],
         "actionText": "Finalizar trámite",
-        "nextStep": null,
+        "nextStep": 9,
         "faq": [
             {
                 "initials": "AP",
@@ -377,5 +377,17 @@
                 "useranswerimage": "moises.webp"
             }
         ]
+    },
+    {
+        "id": 9,
+        "subtitle": "FINALIZADO",
+        "title": "¡Felicidades!",
+        "description": "Completaste tu inscripción, te invitamos a unirte a nuestra comunidad https://chat.whatsapp.com/IVznvrbX6nW7rfueJArv21",
+        "imagenes": [
+            "logoTuki.webp"
+        ],
+        "actionText": "Finalizar",
+        "nextStep": null,
+        "faq": []
     }
 ]

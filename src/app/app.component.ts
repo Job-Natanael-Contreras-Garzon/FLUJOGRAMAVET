@@ -29,6 +29,7 @@ import { FlowService, StepData } from './services/flow';
         @if (currentStepData(); as data) {
            <app-step-viewer
              [step]="data"
+             [isDarkMode]="isDarkMode()"
              (next)="handleNext(data.nextStep)"
              (back)="handleBack()"
            />
