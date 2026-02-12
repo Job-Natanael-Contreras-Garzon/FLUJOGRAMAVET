@@ -1,7 +1,7 @@
 {
-  "name": "Info TukiVet - Guía de Inscripción Veterinaria UAGRM",
+  "name": "TukiVet - Guía Inscripción Veterinaria UAGRM 2026",
   "short_name": "TukiVet",
-  "description": "Guía completa y actualizada para la inscripción en la carrera de Veterinaria UAGRM 2026. Instrucciones paso a paso, requisitos, costos y ubicaciones.",
+  "description": "Guía completa de inscripción en Veterinaria UAGRM 2026 para estudiantes. Trámites paso a paso, requisitos, costos, CPD, Centro Interno, Dirección de Carrera. Todo lo necesario para iniciar tu carrera en Medicina Veterinaria y Zootecnia.",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

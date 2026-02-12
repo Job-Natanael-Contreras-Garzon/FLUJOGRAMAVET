@@ -2,11 +2,10 @@
 User-agent: *
 Allow: /
 
-# Bloquear acceso a directorios innecesarios
-Disallow: /assets/
+# Bloquear acceso a archivos de configuración
 Disallow: /*.json$
 
-# Sitemap
+# Sitemap actualizado
 Sitemap: https://tukiweb.vercel.app/sitemap.xml
 
 # Seguridad: Bloquear rastreadores maliciosos comunes
