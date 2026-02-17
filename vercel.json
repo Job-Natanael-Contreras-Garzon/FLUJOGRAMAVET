@@ -76,6 +76,19 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://tukiweb.vercel.app/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "infovet.vercel.app"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
