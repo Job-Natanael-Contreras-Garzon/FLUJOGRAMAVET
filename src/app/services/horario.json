@@ -353,6 +353,113 @@
             ]
           }
         ]
+      },
+      {
+        "nombre": "Grupo G",
+        "materias": [
+          {
+            "sigla": "SAP100",
+            "nombre": "ECOLOGIA GRAL",
+            "docente": "POR DESIGNAR"
+          },
+          {
+            "sigla": "VET100",
+            "nombre": "HIST. Y EMB. VET.",
+            "docente": "POR DESIGNAR"
+          },
+          {
+            "sigla": "VET101",
+            "nombre": "ANAT. VET. I",
+            "docente": "POR DESIGNAR"
+          },
+          {
+            "sigla": "VET102",
+            "nombre": "MET. DE LA INV.",
+            "docente": "POR DESIGNAR"
+          },
+          {
+            "sigla": "ZOT100",
+            "nombre": "BIOQ. VET. 1",
+            "docente": "POR DESIGNAR"
+          }
+        ],
+        "cronograma": [
+          {
+            "dia": "Lunes",
+            "segmentos": [
+              {
+                "h": "07:45-10:00",
+                "s": "VET101",
+                "a": "247-03"
+              },
+              {
+                "h": "10:00-11:30",
+                "s": "VET102",
+                "a": "247-03"
+              }
+            ]
+          },
+          {
+            "dia": "Martes",
+            "segmentos": [
+              {
+                "h": "07:00-09:15",
+                "s": "SAP100",
+                "a": "247-03"
+              },
+              {
+                "h": "10:00-13:00",
+                "s": "VET102",
+                "a": "247-03"
+              }
+            ]
+          },
+          {
+            "dia": "Miercoles",
+            "segmentos": [
+              {
+                "h": "07:45-09:15",
+                "s": "ZOT100",
+                "a": "247-03"
+              },
+              {
+                "h": "10:00-13:00",
+                "s": "VET101",
+                "a": "247-03"
+              }
+            ]
+          },
+          {
+            "dia": "Jueves",
+            "segmentos": [
+              {
+                "h": "07:45-09:15",
+                "s": "ZOT100",
+                "a": "247-03"
+              },
+              {
+                "h": "10:00-13:00",
+                "s": "VET100",
+                "a": "247-03"
+              }
+            ]
+          },
+          {
+            "dia": "Viernes",
+            "segmentos": [
+              {
+                "h": "07:00-08:30",
+                "s": "SAP100",
+                "a": "247-03"
+              },
+              {
+                "h": "09:15-11:30",
+                "s": "VET100",
+                "a": "228-20"
+              }
+            ]
+          }
+        ]
       }
     ],
     "tarde": [
