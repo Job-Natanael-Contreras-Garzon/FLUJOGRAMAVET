@@ -85,7 +85,7 @@ export interface FaqItem {
       </div>
 
       <footer class="mt-12 py-6 text-center border-t border-slate-100 dark:border-white/5 transition-colors">
-        <a href="#" class="text-xs text-slate-400 dark:text-gray-500 hover:text-indigo-500 transition-colors">Copyright © 2026 TUKI-VET. Todos los derechos reservados.</a>
+        <a href="#" class="text-xs text-slate-400 dark:text-gray-500 hover:text-indigo-500 transition-colors">Copyright © 2026 Urizar Odessa <3. Todos los derechos reservados.</a>
       </footer>
 
     </div>
